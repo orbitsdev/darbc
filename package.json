@@ -19,7 +19,14 @@
         "vue": "^3.2.47"
     },
     "dependencies": {
+        "@element-plus/icons-vue": "^2.0.10",
         "@inertiajs/vue3": "^1.0.0",
-        "@vue/compiler-sfc": "^3.2.47"
+        "@mdi/font": "^7.1.96",
+        "@mdi/js": "^7.1.96",
+        "@vue/compiler-sfc": "^3.2.47",
+        "element-plus": "^2.2.30",
+        "postcss-class-prefix": "^0.2.0",
+        "postcss-cli": "^10.1.0",
+        "vuetify": "^3.1.4"
     }
 }

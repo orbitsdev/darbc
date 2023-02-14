@@ -1,3 +1,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+.font-rubik {
+    font-family: 'Rubik', sans-serif;
+
+}
+.font-roboto {
+    font-family: 'Roboto', sans-serif;
+
+}
+
+
+.dr-bg-purple{
+    background:#220068 !important;
+}
+.dr-bg-purple-light{
+    background:#5819d5 !important;
+}
+.dr-bg-purple-active{
+    background:#220068 !important;
+}
+.dr-bg-purple:hover{
+    background:#4110a2 !important;
+}
+
+.dr-text-purple-900{
+    color: #220068 ;
+}
+.dr-text-purple-100{
+    color: #643ab9 ;
+}

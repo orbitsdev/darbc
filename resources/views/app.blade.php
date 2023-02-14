@@ -8,6 +8,7 @@
 
         <!-- Fonts -->
         <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
         <!-- Styles -->
         <style>
@@ -19,11 +20,12 @@
                 font-family: 'Nunito', sans-serif;
             }
         </style>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
          @routes
           @vite(['resources/css/app.css', 'resources/js/app.js'])
           @inertiaHead
     </head>
-    <body class="antialiased">
+    <body class="antialiased bg-gray-200">
         @inertia
     {{--  <div class="bg-red-500 py-4">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, impedit pariatur, ipsum adipisci delectus dolor veniam recusandae, odio consequuntur obcaecati ipsa excepturi vel illo commodi provident eligendi reprehenderit. Quo, facilis?

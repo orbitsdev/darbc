@@ -17,3 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return Inertia::render('login');
 });
+Route::get('/login', function () {
+    return Inertia::render('login');
+});
+Route::get('/dashboard', function () {
+    return Inertia::render('dashboard');
+});

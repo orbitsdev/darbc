@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Str;
 
-// $DATABASE_URL=parse_url('DATABASE_URL');
+$DATABASE_URL=parse_url('postgres://atvebscnbxeucj:22db540f2fb7d159a9bc7c2a8358b0772984038c036a5470e35851b5348ab1d7@ec2-3-217-251-77.compute-1.amazonaws.com:5432/dcv49oft57egf1');
 return [
 
     /*
@@ -16,8 +16,8 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
-    // 'default' => env('DB_CONNECTION', 'pgsql'),
+    // 'default' => env('DB_CONNECTION', 'mysql'),
+    'default' => env('DB_CONNECTION', 'pgsql'),
 
     /*
     |--------------------------------------------------------------------------
@@ -65,21 +65,21 @@ return [
             ]) : [],
         ],
 
-        // 'pgsql' => [
-        //     'driver' => 'pgsql',
-        //     'url' => env('DATABASE_URL'),
-        //     // 'host' => env('DB_HOST', '127.0.0.1'),
-        //     'host' => $DATABASE_URL['host'],
-        //     'port' => $DATABASE_URL['port'],
-        //     'database' => ltrim($DATABASE_URL[''], '/'),
-        //     'username' => $DATABASE_URL['user'],
-        //     'password' => $DATABASE_URL['pass'],
-        //     'charset' => 'utf8',
-        //     'prefix' => '',
-        //     'prefix_indexes' => true,
-        //     'search_path' => 'public',
-        //     'sslmode' => 'prefer',
-        // ],
+        'pgsql' => [
+            'driver' => 'pgsql',
+            'url' => env('DATABASE_URL'),
+            // 'host' => env('DB_HOST', '127.0.0.1'),
+            'host' => $DATABASE_URL['host'],
+            'port' => $DATABASE_URL['port'],
+            'database' => ltrim($DATABASE_URL['path'], '/'),
+            'username' => $DATABASE_URL['user'],
+            'password' => $DATABASE_URL['pass'],
+            'charset' => 'utf8',
+            'prefix' => '',
+            'prefix_indexes' => true,
+            'search_path' => 'public',
+            'sslmode' => 'prefer',
+        ],
 
         'sqlsrv' => [
             'driver' => 'sqlsrv',

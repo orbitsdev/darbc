@@ -43,6 +43,7 @@ import  DarNavigation from './components/DarNavigation.vue';
 import  DarButton from './components/DarButton.vue';
 import  DarDialog from './components/DarDialog.vue';
 import  DarTable from './components/DarTable.vue';
+import  DarTable2 from './components/DarTable2.vue';
  
 
 createInertiaApp({
@@ -53,7 +54,8 @@ createInertiaApp({
     .component('DarNavigation', DarNavigation)
     .component('DarButton' ,DarButton)
     .component('DarDialog', DarDialog)
-    .component('DarTable', DarTable);
+    .component('DarTable', DarTable)
+    .component('DarTable2', DarTable2);
 
     new WaveUI(app, {
       // Some Wave UI options.

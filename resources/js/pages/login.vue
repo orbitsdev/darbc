@@ -8,7 +8,7 @@
           <img src="/assets/darbc.png" alt="" class="h-16 w-16">
         </div>
         <p class=" w-full text-center font-rubik font-bold text-4xl mt-4 dr-text-purple-900 ">Welcome to DARBC</p>
-        <p class=" w-full text-center  text-lg  font-rubik dr-text-purple-100 mt-1"> Enter a valid accoun to continue signing in</p>
+        <p class=" w-full text-center  text-lg  font-rubik dr-text-purple-100 mt-1"> Enter a valid account to continue signing in</p>
         <div class="mt-6">
 
           
@@ -42,7 +42,7 @@
             </div>
           </div>
           
-          <button class="w-full dr-bg-purple rounded-lg text-white font-rubik uppercase  text-lg py-3 ">Login</button>
+          <Link as="button" href="/dashboard" class="w-full dr-bg-purple rounded-lg text-white font-rubik uppercase  text-lg py-3 ">Login</Link>
         </div>
       </aside>
 
@@ -53,15 +53,17 @@
 
 </template>
 
-<script  setup>
-import { reactive, ref } from 'vue'
+<script  >
 
-const labelPosition = ref('right')
 
-const form = reactive({
-  username: '',
-  password: '',
-})
+import {Link} from '@inertiajs/vue3'
+export default {
+components: {
+  Link,
+},
+}
+
+
 </script>
 
 <style scoped>

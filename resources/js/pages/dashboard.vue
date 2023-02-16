@@ -5,6 +5,7 @@ const items = ref([1, 2, 3, 4, 5, 1, 2, 3, 4, 51, 2, 3, 4, 51, 2, 3, 4, 5]);
 const showDialog = ref(false);
 const showSearch = ref(false);
 const showDetails = ref(false);
+const showActual = ref(false);
 const showDraw = ref(false);
 const isSideBarOpen = ref(false);
 
@@ -26,7 +27,7 @@ function toggle() {
       <div class="py-4">
         <DarNavigation />
       </div>
-
+     
       <section class="flex justify-between">
         <div class="flex-1 mr-4 relative">
           <div class="flex items-center">
@@ -167,59 +168,81 @@ function toggle() {
           </div>
         </div>
         <div>
-          <DarButton @click="toggle">
-            <i class="fa-solid fa-plus mr-2"></i> Add Land Owner</DarButton
+         
+          <DarButton  class="min-w-40 mr-2 " @click="toggle">
+            <i class=" mr-2 fa-solid fa-plus"></i> Add Land Owner</DarButton
           >
+            
+          <DarButton  class="min-w-40 mr-2 " @click="showActual = true">
+            <i class="fa-solid fa-file-contract mr-2 "></i> Actual </DarButton
+          >
+            
+       
+         
         </div>
       </section>
-      <div class="mt-2 py-1 rounded flex items-center justify-start mb-2">
-        <div class="border">
-          <select
-            class="border py-0.5 px-2 rounded bg-gray-200 min-w-96 border-gray-400 mx-1"
-          >
-            <option value="">Polomolok</option>
-          </select>
+      <div>
+
+      <div class="flex items-center justify-between"> 
+        <div class="mt-2 py-1 rounded flex items-center justify-start mb-2">
+          <div class="border">
+            <select
+              class="border py-0.5 px-2 rounded bg-gray-200 min-w-96 border-gray-400 mx-1"
+            >
+              <option value="">Polomolok</option>
+            </select>
+          </div>
+          <div class="border">
+            <select
+              class="border py-0.5 px-2 rounded bg-gray-200 min-w-96 border-gray-400 mx-1"
+            >
+              <option value="">Hectars</option>
+            </select>
+          </div>
+          <div class="border">
+            <select
+              class="border py-0.5 px-2 rounded bg-gray-200 min-w-96 border-gray-400 mx-1"
+            >
+              <option value="">Date</option>
+            </select>
+          </div>
+          <div class="border">
+            <select
+              class="border py-0.5 px-2 rounded bg-gray-200 min-w-96 border-gray-400 mx-1"
+            >
+              <option value="">Location</option>
+            </select>
+          </div>
+          <div class="border">
+            <select
+              class="border py-0.5 px-2 rounded bg-gray-200 min-w-96 border-gray-400 mx-1"
+            >
+              <option value="">Tax</option>
+            </select>
+          </div>
+          
         </div>
-        <div class="border">
-          <select
-            class="border py-0.5 px-2 rounded bg-gray-200 min-w-96 border-gray-400 mx-1"
-          >
-            <option value="">Hectars</option>
-          </select>
-        </div>
-        <div class="border">
-          <select
-            class="border py-0.5 px-2 rounded bg-gray-200 min-w-96 border-gray-400 mx-1"
-          >
-            <option value="">Date</option>
-          </select>
-        </div>
-        <div class="border">
-          <select
-            class="border py-0.5 px-2 rounded bg-gray-200 min-w-96 border-gray-400 mx-1"
-          >
-            <option value="">Location</option>
-          </select>
-        </div>
-        <div class="border">
-          <select
-            class="border py-0.5 px-2 rounded bg-gray-200 min-w-96 border-gray-400 mx-1"
-          >
-            <option value="">Tax</option>
-          </select>
-        </div>
+        <!-- <DarButton class="">
+          <i class="fa-solid fa-file-contract mr-2 "></i> Actual </DarButton
+        > -->
       </div>
+    
+    </div>
 
       <div class="mb-20">
-        <DarTable @click="showSideBar" @showDetails="showDetails = true" @showDraw= "showDraw = true"></DarTable>
+        <DarTable
+          @click="showSideBar"
+          @showDetails="showDetails = true"
+          @showDraw="showDraw = true"
+        ></DarTable>
         <div class="py-2 flex items-center justify-between">
           <p class="text-xs py-1">Showing 1 to 10 results</p>
           <div class="flex items-center justify-center">
-            <div class="px-2 mx-0.5  bg-white"><i class="fa-solid fa-angle-left"></i></div>
-            <div class="px-2 mx-0.5  bg-white">1</div>
-            <div class="px-2 mx-0.5  bg-white">2</div>
-            <div class="px-2 mx-0.5  bg-white">3</div>
-            <div class="px-2 mx-0.5  bg-white">
+            <div class="px-2 mx-0.5 bg-white"><i class="fa-solid fa-angle-left"></i></div>
+            <div class="px-2 mx-0.5 bg-white">1</div>
+            <div class="px-2 mx-0.5 bg-white">2</div>
+            <div class="px-2 mx-0.5 bg-white">3</div>
+            <div class="px-2 mx-0.5 bg-white">
               <i class="fa-solid fa-chevron-right"></i>
             </div>
           </div>
@@ -492,167 +515,217 @@ function toggle() {
       </DarDialog>
 
       <DarDialog :fullScreen="true" :width="'970'" :isOpen="showDetails">
-        <div class="mb-4 z-50">
+        <div class="mb-2 z-50">
           <DarNavigation />
         </div>
-        <div class="px-4">
-          <div class="flex items-center justify-between">
-            <div class="flex items-center">
-              <div class="mr-2">
-                <p class="text-lg uppercase font-rubik font-bold dr-text-purple-900">
-                  Land Information
-                </p>
-              </div>
-              <button>
-                <i class="fa-regular fa-pen-to-square dr-text-purple-900"></i>
-              </button>
-            </div>
-            <div>
-              <DarButton @click="showDetails = false" class="mr-4">
-                <i class="fa-solid fa-arrow-left mr-2"></i> Go Back</DarButton
-              >
-            </div>
-          </div>
-          <div class="">
-            <div class="col-span-5 ">
-
-              <div class="flex">
-                <div class=" mr-10 ">
-                  <p class="text-lg font-rubik font-medium mb-2  uppercase">
-                    Owners Information
-                  </p>
-
-                  <div class="flex items-center mb-1.5">
-                    <div class="drlabel text-sm"> Descendent</div>
-                    <div class="dr-text-purple-900 font-roboto font-bold"> Elmet t</div>
-                  </div>
-                  <div class="flex items-center mb-1.5">
-                    <div class="drlabel text-sm"> Decendant name</div>
-                    <div class="dr-text-purple-900 font-roboto font-bold"> Decendent name</div>
-                  </div>
-                  <div class="flex items-center mb-1.5">
-                    <div class="drlabel text-sm"> Lot location</div>
-                    <div class="dr-text-purple-900  font-roboto font-bold"> Block 2, lot village</div>
-                  </div>
-                  <div class="flex items-center mb-1.5">
-                    <div class="drlabel text-sm"> Draw Date</div>
-                    <div class="text-sm"> None</div>
-                  </div>
-                </div>
-
-                <div class=" mr-10 ">
-                  <p class="text-lg font-rubik font-medium mb-2 uppercase">
-                    Buyers Information
-                  </p>
-                  <div class="flex items-center mb-1.5">
-                    <div class="drlabel text-sm"> Status</div>
-                    <div class="dr-text-purple-900  rounded-full text-sm uppercase bg-rose-200  px-2 text-rose-600 font-bold" > Unsold</div>
-                  </div>
-                  <div class="flex items-center mb-1.5">
-                    <div class="drlabel text-sm"> Buyer's name</div>
-                    <div class="text-gray-600 text-sm font-roboto "> None</div>
-                  </div>
-                  <div class="flex items-center mb-1.5">
-                    <div class="drlabel text-sm"> Date Sold</div>
-                    <div class="text-gray-600 text-sm font-roboto "> None</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <section class="mt-4 grid grid-cols-12 gap-6">
-          <div class=" col-span-3">
-            <div class="flex items-center">
-              <div class="mr-2">
-                <p class="text-lg font-rubik font-bold dr-text-purple-900">
-                  Land Map
-                </p>
-              </div>
-              <button>
-                <i class="fa-regular fa-pen-to-square dr-text-purple-900"></i>
-              </button>
-            </div>
-            <div class=" border bg-white mt-2 ">
-                <img src="/assets/sample1.jpg" alt="w-full h-12 rounded">
-            </div>
-          </div>
-          <div class=" col-span-9">
-            <div class="flex items-center">
-              <div class="mr-2">
-                <p class="text-lg font-rubik font-bold dr-text-purple-900">
-                 Documents
-                </p>
-              </div>
-              <button>
-                <i class="fa-regular fa-pen-to-square dr-text-purple-900"></i>
-              </button>
-            </div>
-            <div class="mt-2">
-              <table class=" w-full overflow-y-auto  divide-y divide-gray-600 table-auto">
-                <thead
-                  class="  dr-bg-purple-active text-gray-300 divide-y divide-gray-200 bg-white"
-                >
-                  <tr class=" divide-y divide-gray-600  top-0 dr-bg-purple-active">
-                  
-                      <td class="p-1 text-sm font-roboto">Lotitile</td>
-                      <td class="p-1 text-sm font-roboto">Jnaury</td>
-                      <td class="p-1 text-sm font-roboto"></td>
-                      <td class="p-1 text-sm font-roboto">2mb</td>
-                
-                    </tr>
-                  </thead>
-                  <tbody class="bg-white divide-y  divide-gray-200">
-                    <tr>
-                      <td class="p-1 text-sm font-roboto">Lotitile</td>
-                      <td class="p-1 text-sm font-roboto">Jnaury</td>
-                      <td class="p-1 text-sm font-roboto"></td>
-                      <td class="p-1 text-sm font-roboto">2mb</td>
-                    </tr>
-                    <tr>
-                      <td class="p-1 text-sm font-roboto">Lotitile</td>
-                      <td class="p-1 text-sm font-roboto">Jnaury</td>
-                      <td class="p-1 text-sm font-roboto"></td>
-                      <td class="p-1 text-sm font-roboto">2mb</td>
-                    </tr>
-                    <tr>
-                      <td class="p-1 text-sm font-roboto">Lotitile</td>
-                      <td class="p-1 text-sm font-roboto">Jnaury</td>
-                      <td class="p-1 text-sm font-roboto"></td>
-                      <td class="p-1 text-sm font-roboto">2mb</td>
-                    </tr>
-                  </tbody>
-                </table>
-            </div>
-          </div>
-          </section>
+        <div class="flex items-center justify-end">
+          <DarButton @click="showDetails = false" class="mr-4">
+            <i class="fa-solid fa-arrow-left mr-2"></i> Go Back</DarButton
+          >
         </div>
 
-      
+        <w-divider class="mt-4 " color="purple" />
+        <div class="bg-gray-300 p-10 grid grid-cols-12 gap-x-2">
+            <div class=" col-span-4">
+              <p class="font-rubik text-lg">Basic Information</p>
+                <div class="mt-3">
+                  <img src="/assets/sample1.jpg" alt="lot" class="h-60 w-80">
+                </div>
+            </div>
+            <div class=" col-span-8">
+                <div class="flex items-start mb-2    ">
+                    <p class="lg:w-48  text-gray-700 font-rubik text-sm">No.</p>
+                    <div class="font-rubik text-black font-medium uppercase text-sm">1</div>
+                </div>
+                <div class="flex items-start mb-2    ">
+                    <p class="lg:w-48  text-gray-700 font-rubik text-sm">Lot No</p>
+                    <div class="font-rubik text-black font-medium uppercase text-sm">6</div>
+                </div>
+                <div class="flex items-start mb-2    ">
+                    <p class="lg:w-48  text-gray-700 font-rubik text-sm">Surver No.</p>
+                    <div class="font-rubik text-black font-medium uppercase text-sm">gss-390</div>
+                </div>
+                <div class="flex items-start mb-2    ">
+                    <p class="lg:w-48  text-gray-700 font-rubik text-sm">Title Area</p>
+                    <div class="font-rubik text-black font-medium uppercase text-sm">12.08490</div>
+                </div>
+                <div class="flex items-start mb-2    ">
+                    <p class="lg:w-48  text-gray-700 font-rubik text-sm">Award Area</p>
+                    <div class="font-rubik text-black font-medium uppercase text-sm">9.930123</div>
+                </div>
+                <div class="flex items-start mb-2    ">
+                    <p class="lg:w-48  text-gray-700 font-rubik text-sm">Previous Land Owner</p>
+                    <div class="font-rubik text-black font-medium uppercase text-sm">Tomas Bayan</div>
+                </div>
+                <div class="flex items-start mb-2    ">
+                    <p class="lg:w-48  text-gray-700 font-rubik text-sm">Field No.</p>
+                    <div class="font-rubik text-black font-medium uppercase text-sm">118b</div>
+                </div>
+                <div class="flex items-start mb-2    ">
+                    <p class="lg:w-48  text-gray-700 font-rubik text-sm">Location</p>
+                    <div class="font-rubik text-black font-medium uppercase text-sm">polo</div>
+                </div>
+                <div class="flex items-start mb-2    ">
+                    <p class="lg:w-48  text-gray-700 font-rubik text-sm">Municipality</p>
+                    <div class="font-rubik text-black font-medium uppercase text-sm">polomolok</div>
+                </div>
+                <div class="flex items-start mb-2    ">
+                    <p class="lg:w-48  text-gray-700 font-rubik text-sm">title</p>
+                    <div class="font-rubik text-black font-medium uppercase text-sm">t-1</div>
+                </div>
+                <div class="flex items-start mb-2    ">
+                    <p class="lg:w-48  text-gray-700 font-rubik text-sm">Cloa No</p>
+                    <div class="font-rubik text-black font-medium uppercase text-sm">1</div>
+                </div>
+                <div class="flex items-start mb-2    ">
+                    <p class="lg:w-48  text-gray-700 font-rubik text-sm">Page</p>
+                    <div class="font-rubik text-black font-medium uppercase text-sm">c-169</div>
+                </div>
+               
+                <div class="flex items-start mb-2    ">
+                    <p class="lg:w-48  text-gray-700 font-rubik text-sm">Encumbered</p>
+                    <div>
 
-        <!-- <section class="flex justify-end mr-4 ">
-      <DarButton
-        @click="showDetails = false"
+                      <div class="lg:w-24 font-rubik  mb-1 ">
+                        <p class="text-sm text-gray-700 italic ">
+                        Area
+                      </p>
+                      <p class="text-sm font-medium text-black fot-rubik ">97.087</p>
+                    </div>
+                    <div class="lg:w-24 font-rubik text-black font-medium mb-1">
+                      <p class="text-sm text-gray-700 italic">
+                        Variance
+                      </p>
+                      <p class="text-sm uppercase">None</p>
+                      </div>
+                    </div>
+
+                </div>
+               
+                <div class="flex items-start mb-2    ">
+                    <p class="lg:w-48  text-gray-700 font-rubik text-sm">Encumbered</p>
+                    <div>
+
+                      <div class="lg:w-24 font-rubik  mb-2 ">
+                        <p class="text-sm text-gray-700 italic ">
+                        Type of title
+                      </p>
+                      <p class="text-sm font-medium text-black fot-rubik uppercase ">tct</p>
+                    </div>
+                    <div class="lg:min-w-24 font-rubik text-black font-medium mb-2">
+                      <p class="text-sm text-gray-700 italic">
+                       No.
+                      </p>
+                      <p class="text-sm uppercase">(t-131631) t-2-17</p>
+                      </div>
+                    </div>
+
+                </div>
+                
+                
+
+                <div class="flex items-start mb-2    ">
+                  <p class="lg:w-48  text-gray-700 font-rubik text-sm">Title Status</p>
+                  <div class="font-rubik text-black font-medium uppercase text-sm">Twc</div>
+              </div>
+                
+                <div class="flex items-start mb-2    ">
+                  <p class="lg:w-48  text-gray-700 font-rubik text-sm">Title Copy</p>
+                  <div class="font-rubik text-black font-medium uppercase text-sm">Affidavit of loss</div>
+              </div>
+                
+            </div>
         
-        class="mr-4"
-        :color="'border  bg-white shadow hover:bg-gray-300 hover:dr-text-purple-900'"
-      >
-        Close</DarButton
-      >
-      <DarButton @click="showDetails = false"> Save</DarButton>
-    </section> -->
+         
+        </div>
+        <w-divider class="" color="purple" />
+        <div class="bg-gray-300  p-10 grid grid-cols-12 gap-x-2">
+            <div class=" col-span-4">
+              <p class="font-rubik text-lg">Tax</p>
+                <div>
+                  
+                </div>
+            </div>
+            <div class=" col-span-8 ">
+                <div class="mb-4">
+                  <p class="lg:w-48  text-black font-medium font-rubik text-sm  mb-1">Select Year</p>
+                  <select
+                  class="lg:w-96  border py-1 px-2 rounded bg-gray-200 min-w-96 border-gray-400 mx-1 text-sm"
+                >
+                  <option value="">2023</option>
+                  <option value="">2022</option>
+                  <option value="">2021</option>
+                </select>
+                </div>
+             
+                <div class="flex items-start mb-2    ">
+                    <p class="lg:w-48  text-gray-700 font-rubik text-sm">Area of title</p>
+                    <div class="font-rubik text-black font-medium uppercase text-sm">1.9172</div>
+                </div>
+                <div class="flex items-start mb-2    ">
+                    <p class="lg:w-48  text-gray-700 font-rubik text-sm">Tax Declaration No.</p>
+                    <div class="font-rubik text-black font-medium uppercase text-sm">m-0701556</div>
+                </div>
+                <div class="flex items-start mb-2    ">
+                  <p class="lg:w-48  text-gray-700 font-rubik text-sm">Market Value</p>
+                  <div class="font-rubik text-black font-medium uppercase text-sm">3,0781295</div>
+              </div>
+                <div class="flex items-start mb-2    ">
+                  <p class="lg:w-48  text-gray-700 font-rubik text-sm">Assessed Value</p>
+                  <div class="font-rubik text-black font-medium uppercase text-sm">41213</div>
+              </div>
+                <div class="flex items-start mb-2    ">
+                  <p class="lg:w-48  text-gray-700 font-rubik text-sm">Year</p>
+                  <div class="font-rubik text-black font-medium uppercase text-sm">2023</div>
+              </div>
+                <div class="flex items-start mb-2    ">
+                    <p class="lg:w-48  text-gray-700 font-rubik text-sm">Remarks</p>
+                    <div class="font-rubik text-black font-medium uppercase text-sm">Area not plnadted to p/a as agrred w /dfl & darbc</div>
+                </div>
+             
+              </div>
+        
+         
+        </div>
+
+     
       </DarDialog>
 
       <DarDialog :isOpen="showDraw" :width="'540'">
-          <div class="flex justify-between">
-            <p class="font-rubik font-bold dr-text-purple-900 ">Make Land Draw </p>
-              <button @click="showDraw = false" ><i class="fa-solid fa-xmark text-gray-500"></i></button>
-          </div>
-          <div class="mt-2">
-            <p class="font-rubik text-sm font-medium">Draw Date</p>
-            <input  required class=" dr-text-purple-100 font-rubik dr-text-purple-900 text-lg pl-12 block w-full appearance-none rounded-md border border-gray-400 px-3 py-2 h-10 placeholder-gray-400 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 ">
-          </div>  
-          <DarButton @click="showDraw = false" class="w-full mt-2" > Save Draw Date </DarButton>
+        <div class="flex justify-between">
+          <p class="font-rubik font-bold dr-text-purple-900">Make Land Draw</p>
+          <button @click="showDraw = false">
+            <i class="fa-solid fa-xmark text-gray-500"></i>
+          </button>
+        </div>
+        <div class="mt-2">
+          <p class="font-rubik text-sm font-medium">Draw Date</p>
+          <input
+            required
+            class="dr-text-purple-100 font-rubik dr-text-purple-900 text-lg pl-12 block w-full appearance-none rounded-md border border-gray-400 px-3 py-2 h-10 placeholder-gray-400 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500"
+          />
+        </div>
+        <DarButton @click="showDraw = false" class="w-full mt-2">
+          Save Draw Date
+        </DarButton>
       </DarDialog>
+
+      <DarDialog :isOpen="showActual"  :fullScreen="true">
+        <div class="mb-2 z-50">
+          <DarNavigation />
+        </div>
+        <div class="flex items-center justify-end">
+          <DarButton @click="showActual = false" class="mr-4">
+            <i class="fa-solid fa-arrow-left mr-2"></i> Go Back</DarButton
+          >
+        </div>
+
+        <div class="px-6">
+          <DarTable2 class="mt-4"/>
+        </div>
+      </DarDialog>
+
+      
     </w-app>
   </main>
 </template>
@@ -688,7 +761,15 @@ function toggle() {
   border-radius: 4px;
 }
 
-.drlabel{
+.drlabel {
   min-width: 140px;
+}
+
+.darlabel2 {
+  min-width: 160px;
+}
+
+.ctd{
+  min-width: 260px;
 }
 </style>

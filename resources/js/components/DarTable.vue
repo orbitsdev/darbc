@@ -2,35 +2,79 @@
 
 <template>
     <section id="darscroll" class=" dartable overflow-x-auto ">
-        <table class=" w-full overflow-y-auto  divide-y divide-gray-600 table-auto">
+        <table class=" w-full overflow-y-auto overflow-x-auto  divide-y divide-gray-600 table-auto">
           <thead
             class="sticky  top-0 dr-bg-purple-active text-gray-300 divide-y divide-gray-200 bg-white"
           >
             <tr class=" divide-y divide-gray-600  top-0 dr-bg-purple-active">
               <th class="text-center text-sm font-roboto uppercase">No</th>
               <th class="text-center text-sm font-roboto uppercase">Lot#</th>
-              <th class="text-center text-sm font-roboto uppercase">Survey no.</th>
-              <th class="text-center text-sm font-roboto uppercase">Field No.</th>
+              <th class="text-center text-sm font-roboto uppercase">Survey</th>
               <th class="text-center text-sm font-roboto uppercase">Title Area</th>
               <th class="text-center text-sm font-roboto uppercase">Awarded Area</th>
-              <th class="text-center text-sm font-roboto uppercase ">Previous</th>
+              <th class="text-center text-sm font-roboto uppercase ">Previous </th>
+              <th class="text-center text-sm font-roboto uppercase">Field</th>
               <th class="text-center text-sm font-roboto uppercase">Location</th>
-              <th class="text-center text-sm font-roboto uppercase">Municpality</th>
+              <th class="text-center text-sm font-roboto uppercase">Municipality</th>
+              <th class="text-center text-sm font-roboto uppercase">Title</th>
+              <th class="text-center text-sm font-roboto uppercase">Cloa No</th>
+              <th class="text-center text-sm font-roboto uppercase">Page</th>
+              <th class="text-center text-sm font-roboto uppercase">Encombered</th>
+              <th class="text-center text-sm font-roboto uppercase"></th>
+            </tr>
+            <tr class="sticky divide-y divide-gray-600  top-0 dr-bg-purple-active">
+              <th class="text-center text-sm font-roboto uppercase"></th>
+              <th class="text-center text-sm font-roboto uppercase"></th>
+              <th class="text-center text-sm font-roboto uppercase">No.</th>
+              <th class="text-center text-sm font-roboto uppercase">Has./s</th>
+              <th class="text-center text-sm font-roboto uppercase">Has./s</th>
+              <th class="text-center text-sm font-roboto uppercase ">Land Owner</th>
+              <th class="text-center text-sm font-roboto uppercase">No.</th>
+              <th class="text-center text-sm font-roboto uppercase"></th>
+              <th class="text-center text-sm font-roboto uppercase"></th>
+              <th class="text-center text-sm font-roboto uppercase"></th>
+              <th class="text-center text-sm font-roboto uppercase">No.</th>
+              <th class="text-center text-sm font-roboto uppercase"></th>
+              <th class="text-center text-sm font-roboto uppercase">
+                <section class="grid grid-cols-2">
+                  <div class="w-100 ">
+                    <p>Area</p>
+                  </div>
+                  <div class="w-100 ">
+                    <p>Variance</p>
+                  </div>
+
+                </section>
+              </th>
               <th class="text-center text-sm font-roboto uppercase"></th>
             </tr>
           </thead>
           <tbody class="bg-white  divide-gray-600">
-            <tr class="divide-x" v-for="(item, index) in items" :key="item" :class="[index % 2 ===0 ? '':'bg-gray-100']">
-                <td class="text-center text-sm font-roboto uppercase ">1</td>
-                <td class="text-center text-sm font-roboto uppercase ">2</td>
+            <tr class="divide-x cursor-pointer hover:bg-purple-200 transition-all   " v-for="(item, index) in items" :key="item" :class="[index % 2 ===0 ? '':'bg-gray-100']">
+                <td class="text-center text-sm font-roboto uppercase ">16</td>
+                <td class="text-center text-sm font-roboto uppercase ">4</td>
                 <td class="text-center text-sm font-roboto uppercase ">gss-211.</td>
-                <td class="text-center text-sm font-roboto uppercase ">123 0441</td>
-                <td class="text-center text-sm font-roboto uppercase ">Emilia Bayan</td>
+                <td class="text-center text-sm font-roboto uppercase ">219782</td>
+                <td class="ctd text-center text-sm font-roboto uppercase ">Benjamin BayanJr</td>
+                <td class="text-center text-sm font-roboto uppercase ">205a//204b</td>
+                <td class="text-center text-sm font-roboto uppercase ">118b</td>
+                <td class="text-center text-sm font-roboto uppercase  ">Tupi</td>
                 <td class="text-center text-sm font-roboto uppercase ">Polomolok</td>
-                <td class="text-center text-sm font-roboto uppercase  ">t-7231</td>
-                <td class="text-center text-sm font-roboto uppercase ">Ncla</td>
-                <td class="text-center text-sm font-roboto uppercase ">twc</td>
-               
+                <td class="text-center text-sm font-roboto uppercase ">p-623</td>
+                <td class="text-center text-sm font-roboto uppercase ">2</td>
+                <td class="text-center text-sm font-roboto uppercase ">c-278</td>
+                <td class="text-center text-sm font-roboto uppercase ">
+                  <section class="flex justify-center items-center">
+                    <div class="w-100 ">
+                      <p>21.97892</p>
+                    </div>
+                    <w-divider class="mx-2 bg-gray-100" vertical color=""></w-divider>
+                    <div class="w-100 ">
+                      <p></p>
+                    </div>
+  
+                  </section>
+                </td>
 
                  <td class="  text-center text-gray-700 text-sm font-roboto uppercase">
 
@@ -91,6 +135,10 @@ th {
 
 td{
     padding:0px 4px ;
+}
+
+.ctd{
+  white-space: nowrap;
 }
 
 .dartable{

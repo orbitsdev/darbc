@@ -1,147 +1,694 @@
-
 <script setup>
-    import {ref} from 'vue'
+import { ref } from "vue";
 
-    const items = ref([1,2,3,4,5]);
+const items = ref([1, 2, 3, 4, 5, 1, 2, 3, 4, 51, 2, 3, 4, 51, 2, 3, 4, 5]);
+const showDialog = ref(false);
+const showSearch = ref(false);
+const showDetails = ref(false);
+const showDraw = ref(false);
+const isSideBarOpen = ref(false);
+
+function showSideBar() {
+  isSideBarOpen.value = true;
+
+  console.log("clidsad");
+}
+const search = ref("");
+
+function toggle() {
+  showDialog.value = !showDialog.value;
+}
 </script>
 
 <template>
   <main class="px-6">
-    <DarNavigation/>
+    <w-app>
+      <div class="py-4">
+        <DarNavigation />
+      </div>
 
-    <section class="flex justify-between">
-            <div class="flex-1 mr-4">
-                <input type="text" class="border border-gray-300  h-10 rounded-lg px-4 font-rubik text-sm focus:border-gray-400 border-0.5  outline-none  w-full" placeholder="Searc.. "> 
+      <section class="flex justify-between">
+        <div class="flex-1 mr-4 relative">
+          <div class="flex items-center">
+            <input
+              v-model.trim="search"
+              type="text"
+              class="border border-gray-300 h-10 rounded-lg px-4 pl-10 font-rubik text-sm focus:border-gray-400 border-0.5 outline-none w-full"
+              placeholder="Searc.. "
+            />
+            <div class="absolute top-2 left-4">
+              <i class="fa-solid fa-magnifying-glass text-gray-300 text-sm"></i>
+            </div>
+          </div>
+          <div
+            v-if="search.length > 0"
+            class="darscroll max-h-96 overflow-y-auto absolute bg-white mt-2 shadow-xl right-0 z-10 w-full"
+          >
+            <div
+              class="py-2 px-2 flex items-center justify-between border-b border-gray-300 hover:bg-gray-100 transition-all ease-in-out cursor-pointer"
+            >
+              <div class="">
+                <p class="font-roboto text-sm uppercase">Mari Terisia Kanlungan</p>
+              </div>
+              <div>
+                <DarButton :color="'h-8 dr-bg-purple text-white text-xs'">
+                  Make as ownner</DarButton
+                >
+              </div>
+            </div>
+            <div
+              class="py-2 px-2 flex items-center justify-between border-b border-gray-300 hover:bg-gray-100 transition-all ease-in-out cursor-pointer"
+            >
+              <div class="">
+                <p class="font-roboto text-sm uppercase">Mari Terisia Kanlungan</p>
+              </div>
+              <div>
+                <DarButton :color="'h-8 dr-bg-purple text-white text-xs'">
+                  Make as ownner</DarButton
+                >
+              </div>
+            </div>
+            <div
+              class="py-2 px-2 flex items-center justify-between border-b border-gray-300 hover:bg-gray-100 transition-all ease-in-out cursor-pointer"
+            >
+              <div class="">
+                <p class="font-roboto text-sm uppercase">Mari Terisia Kanlungan</p>
+              </div>
+              <div>
+                <DarButton :color="'h-8 dr-bg-purple text-white text-xs'">
+                  Make as ownner</DarButton
+                >
+              </div>
+            </div>
+            <div
+              class="py-2 px-2 flex items-center justify-between border-b border-gray-300 hover:bg-gray-100 transition-all ease-in-out cursor-pointer"
+            >
+              <div class="">
+                <p class="font-roboto text-sm uppercase">Mari Terisia Kanlungan</p>
+              </div>
+              <div>
+                <DarButton :color="'h-8 dr-bg-purple text-white text-xs'">
+                  Make as ownner</DarButton
+                >
+              </div>
+            </div>
+            <div
+              class="py-2 px-2 flex items-center justify-between border-b border-gray-300 hover:bg-gray-100 transition-all ease-in-out cursor-pointer"
+            >
+              <div class="">
+                <p class="font-roboto text-sm uppercase">Mari Terisia Kanlungan</p>
+              </div>
+              <div>
+                <DarButton :color="'h-8 dr-bg-purple text-white text-xs'">
+                  Make as ownner</DarButton
+                >
+              </div>
+            </div>
+            <div
+              class="py-2 px-2 flex items-center justify-between border-b border-gray-300 hover:bg-gray-100 transition-all ease-in-out cursor-pointer"
+            >
+              <div class="">
+                <p class="font-roboto text-sm uppercase">Mari Terisia Kanlungan</p>
+              </div>
+              <div>
+                <DarButton :color="'h-8 dr-bg-purple text-white text-xs'">
+                  Make as ownner</DarButton
+                >
+              </div>
+            </div>
+            <div
+              class="py-2 px-2 flex items-center justify-between border-b border-gray-300 hover:bg-gray-100 transition-all ease-in-out cursor-pointer"
+            >
+              <div class="">
+                <p class="font-roboto text-sm uppercase">Mari Terisia Kanlungan</p>
+              </div>
+              <div>
+                <DarButton :color="'h-8 dr-bg-purple text-white text-xs'">
+                  Make as ownner</DarButton
+                >
+              </div>
+            </div>
+            <div
+              class="py-2 px-2 flex items-center justify-between border-b border-gray-300 hover:bg-gray-100 transition-all ease-in-out cursor-pointer"
+            >
+              <div class="">
+                <p class="font-roboto text-sm uppercase">Mari Terisia Kanlungan</p>
+              </div>
+              <div>
+                <DarButton :color="'h-8 dr-bg-purple text-white text-xs'">
+                  Make as ownner</DarButton
+                >
+              </div>
+            </div>
+            <div
+              class="py-2 px-2 flex items-center justify-between border-b border-gray-300 hover:bg-gray-100 transition-all ease-in-out cursor-pointer"
+            >
+              <div class="">
+                <p class="font-roboto text-sm uppercase">Mari Terisia Kanlungan</p>
+              </div>
+              <div>
+                <DarButton :color="'h-8 dr-bg-purple text-white text-xs'">
+                  Make as ownner</DarButton
+                >
+              </div>
+            </div>
+            <div
+              class="py-2 px-2 flex items-center justify-between border-b border-gray-300 hover:bg-gray-100 transition-all ease-in-out cursor-pointer"
+            >
+              <div class="">
+                <p class="font-roboto text-sm uppercase">Mari Terisia Kanlungan</p>
+              </div>
+              <div>
+                <DarButton :color="'h-8 dr-bg-purple text-white text-xs'">
+                  Make as ownner</DarButton
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <DarButton @click="toggle">
+            <i class="fa-solid fa-plus mr-2"></i> Add Land Owner</DarButton
+          >
+        </div>
+      </section>
+      <div class="mt-2 py-1 rounded flex items-center justify-start mb-2">
+        <div class="border">
+          <select
+            class="border py-0.5 px-2 rounded bg-gray-200 min-w-96 border-gray-400 mx-1"
+          >
+            <option value="">Polomolok</option>
+          </select>
+        </div>
+        <div class="border">
+          <select
+            class="border py-0.5 px-2 rounded bg-gray-200 min-w-96 border-gray-400 mx-1"
+          >
+            <option value="">Hectars</option>
+          </select>
+        </div>
+        <div class="border">
+          <select
+            class="border py-0.5 px-2 rounded bg-gray-200 min-w-96 border-gray-400 mx-1"
+          >
+            <option value="">Date</option>
+          </select>
+        </div>
+        <div class="border">
+          <select
+            class="border py-0.5 px-2 rounded bg-gray-200 min-w-96 border-gray-400 mx-1"
+          >
+            <option value="">Location</option>
+          </select>
+        </div>
+        <div class="border">
+          <select
+            class="border py-0.5 px-2 rounded bg-gray-200 min-w-96 border-gray-400 mx-1"
+          >
+            <option value="">Tax</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="mb-20">
+        <DarTable @click="showSideBar" @showDetails="showDetails = true" @showDraw= "showDraw = true"></DarTable>
+        <div class="py-2 flex items-center justify-between">
+          <p class="text-xs py-1">Showing 1 to 10 results</p>
+          <div class="flex items-center justify-center">
+            <div class="px-2 mx-0.5  bg-white"><i class="fa-solid fa-angle-left"></i></div>
+            <div class="px-2 mx-0.5  bg-white">1</div>
+            <div class="px-2 mx-0.5  bg-white">2</div>
+            <div class="px-2 mx-0.5  bg-white">3</div>
+            <div class="px-2 mx-0.5  bg-white">
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <DarDialog :isOpen="showDialog">
+        <div class="mb-4 dardialog overflow-y-auto">
+          <!-- <p class="text-2xl font-rubik font-bold font-roboto capitalize text-gray-800"> Create new land record </p> -->
+          <aside class="mt-1">
+            <p class="font-roboto text-lg font-medium">Basic Information</p>
+            <div class="px-4 mx-auto mt-2">
+              <div class="grid grid-cols-12 mb-4">
+                <div
+                  class="col-span-4 flex items-center justify-end pr-4 font-roboto text-sm"
+                >
+                  No
+                </div>
+                <div class="col-span-8 relative flex items-center w-full">
+                  <div class="w-full relative">
+                    <input
+                      required
+                      class="font-rubik text-base block w-full appearance-none rounded-lg border border-gray-300 px-3 py-2 h-10 placeholder-gray-400 shadow-sm focus:border-gray-400 focus:outline-none focus:ring-gray-500"
+                    />
+                    <!-- <p class="font-roboto text-red-600 text-xs mt-1"> Required </p> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="px-4 mx-auto mt-2">
+              <div class="grid grid-cols-12 mb-4">
+                <div
+                  class="col-span-4 flex items-center justify-end pr-4 font-roboto text-sm"
+                >
+                  Lot No
+                </div>
+                <div class="col-span-8 relative flex items-center w-full">
+                  <div class="w-full relative">
+                    <input
+                      required
+                      class="font-rubik text-base block w-full appearance-none rounded-lg border border-gray-300 px-3 py-2 h-10 placeholder-gray-400 shadow-sm focus:border-gray-400 focus:outline-none focus:ring-gray-500"
+                    />
+                    <!-- <p class="font-roboto text-red-600 text-xs mt-1"> Required </p> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="px-4 mx-auto mt-2">
+              <div class="grid grid-cols-12 mb-4">
+                <div
+                  class="col-span-4 flex items-center justify-end pr-4 font-roboto text-sm"
+                >
+                  Survery No
+                </div>
+                <div class="col-span-8 relative flex items-center w-full">
+                  <div class="w-full relative">
+                    <input
+                      required
+                      class="font-rubik text-base block w-full appearance-none rounded-lg border border-gray-300 px-3 py-2 h-10 placeholder-gray-400 shadow-sm focus:border-gray-400 focus:outline-none focus:ring-gray-500"
+                    />
+                    <!-- <p class="font-roboto text-red-600 text-xs mt-1"> Required </p> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="px-4 mx-auto mt-2">
+              <div class="grid grid-cols-12 mb-4">
+                <div
+                  class="col-span-4 flex items-center justify-end pr-4 font-roboto text-sm"
+                >
+                  Title Area
+                </div>
+                <div class="col-span-8 relative flex items-center w-full">
+                  <div class="w-full relative">
+                    <input
+                      required
+                      class="font-rubik text-base block w-full appearance-none rounded-lg border border-gray-300 px-3 py-2 h-10 placeholder-gray-400 shadow-sm focus:border-gray-400 focus:outline-none focus:ring-gray-500"
+                    />
+                    <!-- <p class="font-roboto text-red-600 text-xs mt-1"> Required </p> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="px-4 mx-auto mt-2">
+              <div class="grid grid-cols-12 mb-4">
+                <div
+                  class="col-span-4 flex items-center justify-end pr-4 font-roboto text-sm"
+                >
+                  Awarded Area
+                </div>
+                <div class="col-span-8 relative flex items-center w-full">
+                  <div class="w-full relative">
+                    <input
+                      required
+                      class="font-rubik text-base block w-full appearance-none rounded-lg border border-gray-300 px-3 py-2 h-10 placeholder-gray-400 shadow-sm focus:border-gray-400 focus:outline-none focus:ring-gray-500"
+                    />
+                    <!-- <p class="font-roboto text-red-600 text-xs mt-1"> Required </p> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="px-4 mx-auto mt-2">
+              <div class="grid grid-cols-12 mb-4">
+                <div
+                  class="col-span-4 flex items-center justify-end pr-4 font-roboto text-sm"
+                >
+                  Previouse Land Owner
+                </div>
+                <div class="col-span-8 relative flex items-center w-full">
+                  <div class="w-full relative">
+                    <input
+                      required
+                      class="font-rubik text-base block w-full appearance-none rounded-lg border border-gray-300 px-3 py-2 h-10 placeholder-gray-400 shadow-sm focus:border-gray-400 focus:outline-none focus:ring-gray-500"
+                    />
+                    <!-- <p class="font-roboto text-red-600 text-xs mt-1"> Required </p> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="font-roboto text-lg font-medium">More Information</p>
+            <div class="px-4 mx-auto mt-2">
+              <div class="grid grid-cols-12 mb-4">
+                <div
+                  class="col-span-4 flex items-center justify-end pr-4 font-roboto text-sm"
+                >
+                  Location
+                </div>
+                <div class="col-span-8 relative flex items-center w-full">
+                  <div class="w-full relative">
+                    <select
+                      required
+                      class="font-rubik text-base block w-full appearance-none rounded-lg border border-gray-300 px-3 py-2 h-10 placeholder-gray-400 shadow-sm focus:border-gray-400 focus:outline-none focus:ring-gray-500"
+                    >
+                      <option value="">Polomolok</option>
+                      <option value="">Isulan</option>
+                      <option value="">Taucurong</option>
+                      <option value="">Marbel</option>
+                    </select>
+                    <!-- <p class="font-roboto text-red-600 text-xs mt-1"> Required </p> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="px-4 mx-auto mt-2">
+              <div class="grid grid-cols-12 mb-4">
+                <div
+                  class="col-span-4 flex items-center justify-end pr-4 font-roboto text-sm"
+                >
+                  Municipality
+                </div>
+                <div class="col-span-8 relative flex items-center w-full">
+                  <div class="w-full relative">
+                    <select
+                      id="location"
+                      name="location"
+                      class="mt-1 block w-full rounded-md border-gray-300 py-2 pl-3 pr-10 font-rubik text-base focus:border-indigo-500 focus:outline-none focus:ring-indigo-500"
+                    >
+                      <option>Marbel</option>
+                      <option selected>Gensan</option>
+                      <option>Suralah</option>
+                    </select>
+                    <!-- <p class="font-roboto text-red-600 text-xs mt-1"> Required </p> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="px-4 mx-auto mt-2">
+              <div class="grid grid-cols-12 mb-4">
+                <div
+                  class="col-span-4 flex items-center justify-end pr-4 font-roboto text-sm"
+                >
+                  Cloa
+                </div>
+                <div class="col-span-8 relative flex items-center w-full">
+                  <div class="w-full relative">
+                    <input
+                      required
+                      class="font-rubik text-base block w-full appearance-none rounded-lg border border-gray-300 px-3 py-2 h-10 placeholder-gray-400 shadow-sm focus:border-gray-400 focus:outline-none focus:ring-gray-500"
+                    />
+                    <!-- <p class="font-roboto text-red-600 text-xs mt-1"> Required </p> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="px-4 mx-auto mt-2">
+              <div class="grid grid-cols-12 mb-4">
+                <div
+                  class="col-span-4 flex items-center justify-end pr-4 font-roboto text-sm"
+                >
+                  Page
+                </div>
+                <div class="col-span-8 relative flex items-center w-full">
+                  <div class="w-full relative">
+                    <input
+                      required
+                      class="font-rubik text-base block w-full appearance-none rounded-lg border border-gray-300 px-3 py-2 h-10 placeholder-gray-400 shadow-sm focus:border-gray-400 focus:outline-none focus:ring-gray-500"
+                    />
+                    <!-- <p class="font-roboto text-red-600 text-xs mt-1"> Required </p> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="px-4 mx-auto mt-2">
+              <div class="grid grid-cols-12 mb-4">
+                <div
+                  class="col-span-4 flex items-center justify-end pr-4 font-roboto text-sm"
+                >
+                  Encumbered
+                </div>
+                <div class="col-span-8 relative flex items-center w-full">
+                  <div class="w-full relative">
+                    <input
+                      required
+                      class="font-rubik text-base block w-full appearance-none rounded-lg border border-gray-300 px-3 py-2 h-10 placeholder-gray-400 shadow-sm focus:border-gray-400 focus:outline-none focus:ring-gray-500"
+                    />
+                    <!-- <p class="font-roboto text-red-600 text-xs mt-1"> Required </p> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="px-4 mx-auto mt-2">
+              <div class="grid grid-cols-12 mb-4">
+                <div
+                  class="col-span-4 flex items-center justify-end pr-4 font-roboto text-sm"
+                >
+                  Remarks
+                </div>
+                <div class="col-span-8 relative flex items-center w-full">
+                  <div class="w-full relative">
+                    <input
+                      required
+                      class="font-rubik text-base block w-full appearance-none rounded-lg border border-gray-300 px-3 py-2 h-10 placeholder-gray-400 shadow-sm focus:border-gray-400 focus:outline-none focus:ring-gray-500"
+                    />
+                    <!-- <p class="font-roboto text-red-600 text-xs mt-1"> Required </p> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="px-4 mx-auto mt-2">
+              <div class="grid grid-cols-12 mb-4">
+                <div
+                  class="col-span-4 flex items-center justify-end pr-4 font-roboto text-sm"
+                >
+                  Status
+                </div>
+                <div class="col-span-8 relative flex items-center w-full">
+                  <div class="w-full relative">
+                    <input
+                      required
+                      class="font-rubik text-base block w-full appearance-none rounded-lg border border-gray-300 px-3 py-2 h-10 placeholder-gray-400 shadow-sm focus:border-gray-400 focus:outline-none focus:ring-gray-500"
+                    />
+                    <!-- <p class="font-roboto text-red-600 text-xs mt-1"> Required </p> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+        <section class="flex justify-end mr-4">
+          <DarButton
+            @click="showDialog = false"
+            class="mr-4"
+            :color="'border  bg-white shadow hover:bg-gray-300 hover:dr-text-purple-900'"
+          >
+            Close</DarButton
+          >
+          <DarButton @click="showDialog = false"> Save</DarButton>
+        </section>
+      </DarDialog>
+
+      <DarDialog :fullScreen="true" :width="'970'" :isOpen="showDetails">
+        <div class="mb-4 z-50">
+          <DarNavigation />
+        </div>
+        <div class="px-4">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center">
+              <div class="mr-2">
+                <p class="text-lg uppercase font-rubik font-bold dr-text-purple-900">
+                  Land Information
+                </p>
+              </div>
+              <button>
+                <i class="fa-regular fa-pen-to-square dr-text-purple-900"></i>
+              </button>
             </div>
             <div>
-                <DarButton> <i class="fa-solid fa-plus mr-2 "></i> Add Land Owner</DarButton>
+              <DarButton @click="showDetails = false" class="mr-4">
+                <i class="fa-solid fa-arrow-left mr-2"></i> Go Back</DarButton
+              >
             </div>
-    </section>
+          </div>
+          <div class="">
+            <div class="col-span-5 ">
 
-    <section class="mt-6 overflow-x-auto pb-2">
-        <table class=" divide-y divide-gray-600 table-auto ">
-            <thead class="dr-bg-purple-active text-gray-300  divide-y divide-gray-200 bg-white ">
-              <tr class=" divide-x divide-y  divide-gray-600" >
-                <th  class="  text-center  text-sm font-roboto uppercase ">  No </th>
-                <th  class="  text-center  text-sm font-roboto uppercase ">  Lot# </th>
-                <th  class="  text-center  text-sm font-roboto uppercase ">  Survey no. </th>
-                <th  class="  text-center  text-sm font-roboto uppercase ">  Title Area </th>
-                <th  class="  text-center  text-sm font-roboto uppercase ">  Awarded Area </th>
-                <th  class="  text-center  text-sm font-roboto uppercase ">  Previous </th>
-                <th  class="  text-center  text-sm font-roboto uppercase ">  Field No. </th>
-                <th  class="  text-center  text-sm font-roboto uppercase ">  Location  </th>
-                <th  class="  text-center  text-sm font-roboto uppercase ">  Municpality  </th>
-                <th  class="  text-center  text-sm font-roboto uppercase ">  Title </th>
-                <th  class="  text-center  text-sm font-roboto uppercase ">  CLOA </th>
-                <th  class="  text-center  text-sm font-roboto uppercase ">  Page </th>
-                <th  class="  text-center  text-sm font-roboto uppercase ">  Encumbered </th>
-                <th  class="  text-center  text-sm font-roboto uppercase ">  Previouse Copy of title </th>
-                <th  class="  text-center  text-sm font-roboto uppercase ">  Title Title </th>
-                <th  class="  text-center  text-sm font-roboto uppercase ">  Remakrs </th>
-                <th  class="  text-center  text-sm font-roboto uppercase ">  Status </th>
-                <th  class="  text-center  text-sm font-roboto uppercase ">  Land Banck </th>
+              <div class="flex">
+                <div class=" mr-10 ">
+                  <p class="text-lg font-rubik font-medium mb-2  uppercase">
+                    Owners Information
+                  </p>
+
+                  <div class="flex items-center mb-1.5">
+                    <div class="drlabel text-sm"> Descendent</div>
+                    <div class="dr-text-purple-900 font-roboto font-bold"> Elmet t</div>
+                  </div>
+                  <div class="flex items-center mb-1.5">
+                    <div class="drlabel text-sm"> Decendant name</div>
+                    <div class="dr-text-purple-900 font-roboto font-bold"> Decendent name</div>
+                  </div>
+                  <div class="flex items-center mb-1.5">
+                    <div class="drlabel text-sm"> Lot location</div>
+                    <div class="dr-text-purple-900  font-roboto font-bold"> Block 2, lot village</div>
+                  </div>
+                  <div class="flex items-center mb-1.5">
+                    <div class="drlabel text-sm"> Draw Date</div>
+                    <div class="text-sm"> None</div>
+                  </div>
+                </div>
+
+                <div class=" mr-10 ">
+                  <p class="text-lg font-rubik font-medium mb-2 uppercase">
+                    Buyers Information
+                  </p>
+                  <div class="flex items-center mb-1.5">
+                    <div class="drlabel text-sm"> Status</div>
+                    <div class="dr-text-purple-900  rounded-full text-sm uppercase bg-rose-200  px-2 text-rose-600 font-bold" > Unsold</div>
+                  </div>
+                  <div class="flex items-center mb-1.5">
+                    <div class="drlabel text-sm"> Buyer's name</div>
+                    <div class="text-gray-600 text-sm font-roboto "> None</div>
+                  </div>
+                  <div class="flex items-center mb-1.5">
+                    <div class="drlabel text-sm"> Date Sold</div>
+                    <div class="text-gray-600 text-sm font-roboto "> None</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <section class="mt-4 grid grid-cols-12 gap-6">
+          <div class=" col-span-3">
+            <div class="flex items-center">
+              <div class="mr-2">
+                <p class="text-lg font-rubik font-bold dr-text-purple-900">
+                  Land Map
+                </p>
+              </div>
+              <button>
+                <i class="fa-regular fa-pen-to-square dr-text-purple-900"></i>
+              </button>
+            </div>
+            <div class=" border bg-white mt-2 ">
+                <img src="/assets/sample1.jpg" alt="w-full h-12 rounded">
+            </div>
+          </div>
+          <div class=" col-span-9">
+            <div class="flex items-center">
+              <div class="mr-2">
+                <p class="text-lg font-rubik font-bold dr-text-purple-900">
+                 Documents
+                </p>
+              </div>
+              <button>
+                <i class="fa-regular fa-pen-to-square dr-text-purple-900"></i>
+              </button>
+            </div>
+            <div class="mt-2">
+              <table class=" w-full overflow-y-auto  divide-y divide-gray-600 table-auto">
+                <thead
+                  class="  dr-bg-purple-active text-gray-300 divide-y divide-gray-200 bg-white"
+                >
+                  <tr class=" divide-y divide-gray-600  top-0 dr-bg-purple-active">
+                  
+                      <td class="p-1 text-sm font-roboto">Lotitile</td>
+                      <td class="p-1 text-sm font-roboto">Jnaury</td>
+                      <td class="p-1 text-sm font-roboto"></td>
+                      <td class="p-1 text-sm font-roboto">2mb</td>
                 
-                <!-- <th  class="  text-center  text-sm font-roboto uppercase ">  Date Paid </th>
-                    <th  class="  text-center  text-sm font-roboto uppercase ">  Amount </th>
-                <th  class="  text-center  text-sm font-roboto uppercase ">  Date Cert </th>
-                <th  class="  text-center  text-sm font-roboto uppercase ">  Ndc </th>
-                <th  class="  text-center  text-sm font-roboto uppercase ">  Notes </th>
-              </tr>
-              <tr class="divide-x divide-gray-200 dr-bg-purple-light ">
-                <th  class="drth text-center  text-sm font-roboto uppercase ">   </th>
-                <th  class="drth text-center  text-sm font-roboto uppercase ">   </th>
-                <th  class="drth text-center  text-sm font-roboto uppercase ">   </th>
-                <th  class="drth text-center  text-sm font-roboto uppercase ">  has./s </th>
-                <th  class="drth text-center  text-sm font-roboto uppercase ">  has./s </th>
-                <th  class="drth text-center  text-sm font-roboto uppercase ">  land owner </th>
-                <th  class="drth text-center  text-sm font-roboto uppercase ">  No. </th>
-                <th  class="drth text-center  text-sm font-roboto uppercase ">    </th>
-                <th  class="drth text-center  text-sm font-roboto uppercase ">  </th>
-                <th  class="drth text-center  text-sm font-roboto uppercase ">   </th>
-                <th  class="drth text-center  text-sm font-roboto uppercase ">  No </th>
-                <th  class="drth text-center  text-sm font-roboto uppercase ">   </th>
-                <th  class="drth text-center  text-sm font-roboto uppercase ">
-                    <section class="grid grid-cols-2 w-full">
-                        <aside  class="drth text-center  text-sm font-roboto uppercase ">  Area </aside>
-                        <aside  class="drth text-center  text-sm font-roboto uppercase "> Variance </aside>
-                    </section> 
-                    Area | Variance
-                    </th>
-               
-                <th  class="drth text-center  text-sm font-roboto uppercase ">  Type title | no </th>
-                <th  class="drth text-center  text-sm font-roboto uppercase ">  status | copy </th>
-                <th  class="drth text-center  text-sm font-roboto uppercase ">   </th>
-                <th  class="drth text-center  text-sm font-roboto uppercase ">   </th>
-                <th  class="drth text-center  text-sm font-roboto uppercase "> AMORTIZATION </th>
-                <th  class="drth text-center  text-sm font-roboto uppercase ">  php </th>
-                <th  class="drth text-center  text-sm font-roboto uppercase ">  month day year </th>
-                <th  class="drth text-center  text-sm font-roboto uppercase ">  month day year </th>
-                <th  class="drth text-center  text-sm font-roboto uppercase ">  direct payment sheme</th>
-                <th  class="drth text-center  text-sm font-roboto uppercase "> </th> -->
-              </tr>
-             
-            </thead>
-            <tbody class="bg-white">
-                <tr class=" divide-x divide-gray-200 align-top" v-for="item in items" :key="item">
-                    <td  class=" text-center text-gray-700  text-sm font-roboto uppercase ">  101</td>
-                    <td  class=" text-center text-gray-700  text-sm font-roboto uppercase ">  42 </td>
-                    <td  class=" text-center text-gray-700  text-sm font-roboto uppercase ">  gsss-211 </td>
-                    <td  class=" text-center text-gray-700  text-sm font-roboto uppercase ">  11 7931 </td>
-                    <td  class=" text-center text-gray-700  text-sm font-roboto uppercase ">  12 </td>
-                    <td  class=" text-center text-gray-700  text-sm font-roboto uppercase ">   (VICENTE LIMBANA) ROGELIO ALFARAS, JR</td>
-                    <td  class=" text-center text-gray-700  text-sm font-roboto uppercase ">  2056/2064. </td>
-                    <td  class=" text-center text-gray-700  text-sm font-roboto uppercase ">  POLO </td>
-                    <td  class=" text-center text-gray-700  text-sm font-roboto uppercase ">  POlomolok  </td>
-                    <td  class=" text-center text-gray-700  text-sm font-roboto uppercase ">  p-626 </td>
-                    <td  class=" text-center text-gray-700  text-sm font-roboto uppercase ">  1012 </td>
-                    <td  class=" text-center text-gray-700  text-sm font-roboto uppercase ">  a </td>
-                    <td  class=" text-center text-gray-700  text-sm font-roboto uppercase "> 
+                    </tr>
+                  </thead>
+                  <tbody class="bg-white divide-y  divide-gray-200">
+                    <tr>
+                      <td class="p-1 text-sm font-roboto">Lotitile</td>
+                      <td class="p-1 text-sm font-roboto">Jnaury</td>
+                      <td class="p-1 text-sm font-roboto"></td>
+                      <td class="p-1 text-sm font-roboto">2mb</td>
+                    </tr>
+                    <tr>
+                      <td class="p-1 text-sm font-roboto">Lotitile</td>
+                      <td class="p-1 text-sm font-roboto">Jnaury</td>
+                      <td class="p-1 text-sm font-roboto"></td>
+                      <td class="p-1 text-sm font-roboto">2mb</td>
+                    </tr>
+                    <tr>
+                      <td class="p-1 text-sm font-roboto">Lotitile</td>
+                      <td class="p-1 text-sm font-roboto">Jnaury</td>
+                      <td class="p-1 text-sm font-roboto"></td>
+                      <td class="p-1 text-sm font-roboto">2mb</td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+          </div>
+          </section>
+        </div>
 
-                        11.7437 | 11.7437 
+      
 
-                    <!-- <section class="grid grid-cols-2  ">
-                        <aside  class=" text-center  text-sm font-roboto uppercase ">  11.7437 </aside>
-                        <aside  class=" text-center  text-sm font-roboto uppercase "> 0.2464 </aside>
-                    </section>  -->
-                    </td>
-                    <td  class=" text-center text-gray-700  text-sm font-roboto uppercase "> oct | 873123  </td>
-                    <td  class=" text-center text-gray-700  text-sm font-roboto uppercase ">  UWC | Affidavit of Loss (Mismatch) </td>
-                    <td  class=" text-center text-gray-700  text-sm font-roboto uppercase ">  COMPROMISE AGREEMENT WITH B'LAAN</td>
-                    <td  class=" text-center text-gray-700  text-sm font-roboto uppercase ">  CANCELLED LOAN  </td>
-                    <td  class=" text-center text-gray-700  text-sm font-roboto uppercase ">  Fully paid </td>
-                    <!-- <td  class=" text-center text-gray-700  text-sm font-roboto uppercase ">  3335,555 </td>
-                    <td  class=" text-center text-gray-700  text-sm font-roboto uppercase ">  Date Paid </td>
-                    <td  class=" text-center text-gray-700  text-sm font-roboto uppercase ">  01/20/2020 </td>
-                    <td  class=" text-center text-gray-700  text-sm font-roboto uppercase ">  Fully paid</td>
-                    <td  class=" text-center text-gray-700  text-sm font-roboto uppercase "> 1.9678.71 PER TITLE,  With CLOA P-624-A issued to DARBC. Patentee Claimant-Valentin Coling, subject of DARAB Order in re: XI-049-SC-94 ordering the exclusion of Lot 43, Gss-211 from the coverage of CLOA No. 00001013and OCT P-624.as annotated at the back of the title  under Entry No.5591 dated Feb. 2, 1995; leased by Dole to Valentin Coling and to DARBC (DAR REMARKS)</td> -->
-                  </tr> 
-             </tbody>
-          </table>
-    </section>
+        <!-- <section class="flex justify-end mr-4 ">
+      <DarButton
+        @click="showDetails = false"
+        
+        class="mr-4"
+        :color="'border  bg-white shadow hover:bg-gray-300 hover:dr-text-purple-900'"
+      >
+        Close</DarButton
+      >
+      <DarButton @click="showDetails = false"> Save</DarButton>
+    </section> -->
+      </DarDialog>
+
+      <DarDialog :isOpen="showDraw" :width="'540'">
+          <div class="flex justify-between">
+            <p class="font-rubik font-bold dr-text-purple-900 ">Make Land Draw </p>
+              <button @click="showDraw = false" ><i class="fa-solid fa-xmark text-gray-500"></i></button>
+          </div>
+          <div class="mt-2">
+            <p class="font-rubik text-sm font-medium">Draw Date</p>
+            <input  required class=" dr-text-purple-100 font-rubik dr-text-purple-900 text-lg pl-12 block w-full appearance-none rounded-md border border-gray-400 px-3 py-2 h-10 placeholder-gray-400 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 ">
+          </div>  
+          <DarButton @click="showDraw = false" class="w-full mt-2" > Save Draw Date </DarButton>
+      </DarDialog>
+    </w-app>
   </main>
 </template>
 
-
 <style scoped>
-th {
-    min-width: 100px;
+.dardialog::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
 
-    white-space: nowrap; 
-    padding: 16px 24px;
- }
+.dardialog::-webkit-scrollbar-thumb {
+  background-color: #c1c1c1;
+  border-radius: 4px;
+}
 
- .drth{
+.dardialog::-webkit-scrollbar-track {
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
 
-    max-width: 300px;
-  
-    white-space: nowrap;
-  
-    padding: 4px 8px;
-    
- }
-td {
-    min-width: 100px !important;
-    max-width: 600px !important;
-    padding: 8px 8px;
- }
+.dardialog::-moz-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.dardialog::-moz-scrollbar-thumb {
+  background-color: #c1c1c1;
+  border-radius: 4px;
+}
+
+.dardialog::-moz-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+.drlabel{
+  min-width: 140px;
+}
 </style>

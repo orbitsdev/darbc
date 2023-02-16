@@ -5,7 +5,7 @@ const isOpen = ref(false);
 
 const closeOnClickOutside = (event) => {
   if (document.getElementById("logout-dropdown").contains(event.target)) {
-   
+    console.log('dasdas');
 
     isOpen.value = !isOpen.value;
   } else {
@@ -25,8 +25,8 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <section class="">
-    <aside class="py-4 flex justify-between ">
+  <section class="z-10">
+    <aside class=" flex justify-between ">
       <div class="flex items-center ">
         <div class="logo flex mr-2">
           <img src="/assets/darbc.png" alt="" class="h-16 w-16" />

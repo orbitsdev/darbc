@@ -2,12 +2,18 @@
 
 <template>
 
-    <button class="dr-bg-purple font-roboto text-sm rounded transition-all ease-in-out h-10 px-4 text-gray-100"> <slot> Click Me</slot></button>
+    <button :class="['font-roboto text-sm rounded transition-all ease-in-out  px-4 ', color ]"> <slot> Click Me</slot></button>
 </template>
 
 <script>
     export default {
-        
+        props: {
+            color: {
+                type: String,
+                default: 'dr-bg-purple text-white h-10'
+                
+            },
+        },
     }
 </script>
 

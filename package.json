@@ -27,6 +27,7 @@
         "element-plus": "^2.2.30",
         "postcss-class-prefix": "^0.2.0",
         "postcss-cli": "^10.1.0",
-        "vuetify": "^3.1.4"
+        "vuetify": "^3.1.4",
+        "wave-ui": "^2.48.0"
     }
 }

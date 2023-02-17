@@ -1,0 +1,53 @@
+{
+  "resources/js/app.css": {
+    "file": "assets/app-543a4909.css",
+    "src": "resources/js/app.css"
+  },
+  "resources/js/app.js": {
+    "css": [
+      "assets/app-543a4909.css"
+    ],
+    "dynamicImports": [
+      "resources/js/pages/dashboard.vue",
+      "resources/js/pages/login.vue"
+    ],
+    "file": "assets/app-53abaeff.js",
+    "isEntry": true,
+    "src": "resources/js/app.js"
+  },
+  "resources/js/pages/dashboard.css": {
+    "file": "assets/dashboard-2836ef51.css",
+    "src": "resources/js/pages/dashboard.css"
+  },
+  "resources/js/pages/dashboard.vue": {
+    "css": [
+      "assets/dashboard-2836ef51.css"
+    ],
+    "file": "assets/dashboard-e4a8a339.js",
+    "imports": [
+      "resources/js/app.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/pages/dashboard.vue"
+  },
+  "resources/js/pages/login.css": {
+    "file": "assets/login-eb6d126e.css",
+    "src": "resources/js/pages/login.css"
+  },
+  "resources/js/pages/login.vue": {
+    "css": [
+      "assets/login-eb6d126e.css"
+    ],
+    "file": "assets/login-47e861a9.js",
+    "imports": [
+      "resources/js/app.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/pages/login.vue"
+  },
+  "resources/sass/app.scss": {
+    "file": "assets/app-5005f49e.css",
+    "isEntry": true,
+    "src": "resources/sass/app.scss"
+  }
+}

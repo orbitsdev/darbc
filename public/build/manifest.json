@@ -1,4 +1,9 @@
 {
+  "resources/css/app.css": {
+    "file": "assets/app-c18807e3.css",
+    "isEntry": true,
+    "src": "resources/css/app.css"
+  },
   "resources/js/app.css": {
     "file": "assets/app-543a4909.css",
     "src": "resources/js/app.css"
@@ -44,10 +49,5 @@
     ],
     "isDynamicEntry": true,
     "src": "resources/js/pages/login.vue"
-  },
-  "resources/sass/app.scss": {
-    "file": "assets/app-5005f49e.css",
-    "isEntry": true,
-    "src": "resources/sass/app.scss"
   }
 }

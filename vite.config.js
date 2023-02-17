@@ -2,8 +2,12 @@ import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
 import vue from '@vitejs/plugin-vue';
 export default defineConfig({
+  server: {
+    host: 'secondweb.projectorb.shop',
+    https : true,
+  },
     plugins: [
-
+       
         laravel({
             input: [
                 'resources/sass/app.scss',

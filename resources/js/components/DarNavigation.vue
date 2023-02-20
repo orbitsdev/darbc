@@ -1,12 +1,11 @@
 <script setup>
+
 import { ref, onMounted, onBeforeUnmount } from "vue";
 
 const isOpen = ref(false);
 
 const closeOnClickOutside = (event) => {
-  if (document.getElementById("logout-dropdown").contains(event.target)) {
-    console.log('dasdas');
-
+  if (document.querySelector(".logout-dropdown").contains(event.target)) {
     isOpen.value = !isOpen.value;
   } else {
     if (isOpen.value == true) {
@@ -25,7 +24,7 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <section class="z-10 bg-white  py-2">
+  <section class="z-10 drprofile bg-white  py-2">
     <aside class=" flex justify-between ">
       <div class="flex items-center ">
         <div class="logo flex mr-2">
@@ -43,8 +42,7 @@ onBeforeUnmount(() => {
         </div>
       </div>
       <div
-        :class="['flex items-center relative rounded-lg cursor-pointer pl-4  transition-all ease-in-out ', isOpen ? 'bg-gray-200 ' : '' ]"
-        id="logout-dropdown"
+        :class="['logout-dropdown flex items-center relative rounded-lg cursor-pointer pl-4  transition-all ease-in-out ', isOpen ? 'bg-gray-200 ' : '' ]"
         @click="toggle"
       >
         <div class="logo flex mr-2">
@@ -110,4 +108,8 @@ onBeforeUnmount(() => {
   </section>
 </template>
 
-<style scoped></style>
+<style scoped>
+.drprofile{
+  z-index: 100 !important;
+}
+</style>

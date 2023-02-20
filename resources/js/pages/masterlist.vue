@@ -511,15 +511,19 @@ function toggle() {
         </section>
       </DarDialog>
 
-      <DarDialog :fullScreen="true" :width="'970'" :isOpen="showDetails">
-        <!-- <div class=" z-50">
-          <DarNavigation />
-        </div> -->
+      <DarDialog  :fullScreen="true" :contentClass="'bg-white'" :width="'970'" :isOpen="showDetails">
+       
+            <!-- <DarNavigation/> -->
         <div class="flex items-center justify-end">
-          <DarButton @click="showDetails = false" class="mr-4">
-            <i class="fa-solid fa-arrow-left mr-2"></i> Go Back</DarButton
+          <DarButton :color="'cursor-pointer hover:scale-95 transition-all ease-in-out text-gray-400 hover:text-purple-700'" @click="showDetails = false" class="mr-4">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-12 h-12">
+  <path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 011.06 0L12 10.94l5.47-5.47a.75.75 0 111.06 1.06L13.06 12l5.47 5.47a.75.75 0 11-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 01-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 010-1.06z" clip-rule="evenodd" />
+</svg>
+
+ </DarButton
           >
         </div>
+
 
         
     <DarDetails/>

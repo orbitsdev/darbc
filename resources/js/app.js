@@ -44,7 +44,16 @@ import  DarButton from './components/DarButton.vue';
 import  DarDialog from './components/DarDialog.vue';
 import  DarTable from './components/DarTable.vue';
 import  DarTable2 from './components/DarTable2.vue';
- 
+import  DarLink from './components/DarLink.vue';
+import  Chart from './components/Chart.vue';
+import  Pie from './components/Pie.vue';
+import  Pie2 from './components/Pie2.vue';
+import  BarGraph from './components/BarGraph.vue';
+import  DarDetails from './components/DarDetails.vue';
+import {Link} from '@inertiajs/vue3';
+
+
+import * as echarts from 'echarts';
 
 createInertiaApp({
   resolve: (name) => resolvePageComponent(`./pages/${name}.vue`, import.meta.glob('./pages/**/*.vue')),
@@ -55,12 +64,19 @@ createInertiaApp({
     .component('DarButton' ,DarButton)
     .component('DarDialog', DarDialog)
     .component('DarTable', DarTable)
-    .component('DarTable2', DarTable2);
+    .component('Link', Link)
+    .component('DarLink', DarLink)
+    .component('Chart', Chart)
+    .component('Pie', Pie)
+    .component('Pie2', Pie2)
+    .component('BarGraph', BarGraph)
+    .component('DarTable2', DarTable2)
+    .component('DarDetails', DarDetails);
 
     new WaveUI(app, {
       // Some Wave UI options.
     })
-
+    app.config.globalProperties.$echarts = echarts;
 
   //   .use(ElementPlus)
   //   .use(vuetify);

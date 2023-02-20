@@ -25,7 +25,7 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <section class="z-10">
+  <section class="z-10 bg-white  py-2">
     <aside class=" flex justify-between ">
       <div class="flex items-center ">
         <div class="logo flex mr-2">
@@ -43,7 +43,7 @@ onBeforeUnmount(() => {
         </div>
       </div>
       <div
-        :class="['flex items-center relative rounded-lg cursor-pointer pl-4  transition-all ease-in-out ', isOpen ? 'bg-gray-300 ' : '' ]"
+        :class="['flex items-center relative rounded-lg cursor-pointer pl-4  transition-all ease-in-out ', isOpen ? 'bg-gray-200 ' : '' ]"
         id="logout-dropdown"
         @click="toggle"
       >
@@ -71,7 +71,7 @@ onBeforeUnmount(() => {
 
         <div
           v-show="isOpen"
-          class="absolute right-0 z-10 mt-48 w-48 origin-bottom-right rounded-md bg-gray-300 py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+          class="absolute right-0 z-10 mt-48 w-48 origin-bottom-right rounded-md bg-gray-200 py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
           role="menu"
           aria-orientation="vertical"
           aria-labelledby="user-menu-button"
@@ -80,7 +80,7 @@ onBeforeUnmount(() => {
           <!-- Active: "bg-gray-100", Not Active: "" -->
           <a
             href="#"
-            class="block px-4 py-2 text-sm font-gray-900 font-rubik hover:bg-gray-400 hover:scale-x-110 rounded-lg transition-all ease-inoute font-base"
+            class="block px-4 py-2 text-sm font-gray-900 font-rubik hover:bg-gray-300 hover:scale-x-110 rounded-lg transition-all ease-inoute font-base"
             role="menuitem"
             tabindex="-1"
             id="user-menu-item-0"
@@ -89,7 +89,7 @@ onBeforeUnmount(() => {
 
           <a
             href="#"
-            class="block px-4 py-2 text-sm font-gray-900 font-rubik hover:bg-gray-400 hover:scale-x-110 rounded-lg transition-all ease-inoute font-base"
+            class="block px-4 py-2 text-sm font-gray-900 font-rubik hover:bg-gray-300 hover:scale-x-110 rounded-lg transition-all ease-inoute font-base"
             role="menuitem"
             tabindex="-1"
             id="user-menu-item-1"
@@ -98,7 +98,7 @@ onBeforeUnmount(() => {
 
           <a
             href="#"
-            class="block px-4 py-2 text-sm font-gray-900 font-rubik hover:bg-gray-400 hover:scale-x-110 rounded-lg transition-all ease-inoute font-base"
+            class="block px-4 py-2 text-sm font-gray-900 font-rubik hover:bg-gray-300 hover:scale-x-110 rounded-lg transition-all ease-inoute font-base"
             role="menuitem"
             tabindex="-1"
             id="user-menu-item-2"

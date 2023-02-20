@@ -24,9 +24,11 @@
         "@mdi/font": "^7.1.96",
         "@mdi/js": "^7.1.96",
         "@vue/compiler-sfc": "^3.2.47",
+        "echarts": "^5.4.1",
         "element-plus": "^2.2.30",
         "postcss-class-prefix": "^0.2.0",
         "postcss-cli": "^10.1.0",
+        "vue-echarts": "^6.5.4",
         "vuetify": "^3.1.4",
         "wave-ui": "^2.48.0"
     }

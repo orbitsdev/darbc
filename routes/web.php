@@ -23,3 +23,15 @@ Route::get('/login', function () {
 Route::get('/dashboard', function () {
     return Inertia::render('dashboard');
 });
+Route::get('/masterlist', function () {
+    return Inertia::render('masterlist');
+});
+Route::get('/inquery', function () {
+    return Inertia::render('inquery');
+});
+Route::get('/calendar', function () {
+    return Inertia::render('calendar');
+});
+Route::get('/reports', function () {
+    return Inertia::render('reports');
+});

@@ -36,6 +36,8 @@ import WaveUI from 'wave-ui'
 import 'wave-ui/dist/wave-ui.css'
 
 
+
+
 import { createApp, h } from 'vue';
 import { createInertiaApp } from '@inertiajs/vue3';
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
@@ -50,9 +52,19 @@ import  Pie from './components/Pie.vue';
 import  Pie2 from './components/Pie2.vue';
 import  BarGraph from './components/BarGraph.vue';
 import  DarDetails from './components/DarDetails.vue';
+import  DarFullCalendar from './components/DarFullCalendar.vue';
+// import  VEscheduleCalendar from './components/VEscheduleCalendar.vue';
 import {Link} from '@inertiajs/vue3';
 
 
+// full calendar
+
+import FullCalendar from '@fullcalendar/vue3';
+import dayGridPlugin from '@fullcalendar/daygrid';
+import interactionPlugin from '@fullcalendar/interaction';
+
+// import VCalendar from 'v-calendar';
+// import 'v-calendar/dist/style.css';
 import * as echarts from 'echarts';
 
 createInertiaApp({
@@ -60,6 +72,7 @@ createInertiaApp({
   setup({ el, App, props, plugin }) {
     const app = createApp({ render: () => h(App, props) })
     .use(plugin)
+    // .use(VCalendar)
     .component('DarNavigation', DarNavigation)
     .component('DarButton' ,DarButton)
     .component('DarDialog', DarDialog)
@@ -71,6 +84,7 @@ createInertiaApp({
     .component('Pie2', Pie2)
     .component('BarGraph', BarGraph)
     .component('DarTable2', DarTable2)
+    .component('DarFullCalendar', DarFullCalendar)
     .component('DarDetails', DarDetails);
 
     new WaveUI(app, {

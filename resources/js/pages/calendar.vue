@@ -1,8 +1,12 @@
 
 
 <template>
-    <div>
-            Calendar
+    <div class="bg-white p-6">
+  <!-- <VEscheduleCalendar/> -->
+     <!-- <v-calendar />
+  <v-date-picker v-model="date" /> -->
+
+  <DarFullCalendar/>
     </div>
 </template>
 

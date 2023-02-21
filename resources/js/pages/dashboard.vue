@@ -49,11 +49,16 @@ export default {
 
         
         bardata:  {
-        labels: ["Gensan", "Tupi", "Marbel", "Polomolok", "Tantangan","Tantangan",  ],
+        labels: ["Gensan", "Tupi", "Marbel", "Polomolok", "Tantangan","Poland", "Isulan", "Gensan",  ],
         value: [
-          { value: 1548, name: "Unplanted" },
-          { value: 335, name: "Growers" },
-          { value: 310, name: "Leased" },
+          { value: 1548, name: "Gensan" },
+          { value: 1335, name: "Tupi" },
+          { value: 1310, name: "Marbel" },
+          { value: 1130, name: "Polomolok" },
+          { value: 1330, name: "Tantangan" },
+          { value: 410, name: "Poland" },
+          { value: 820, name: "Isulan" },
+          { value: 960, name: "Gensan" },
         ],
       },
 

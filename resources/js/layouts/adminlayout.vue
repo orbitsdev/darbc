@@ -42,7 +42,7 @@
                 />
               </svg>
 
-              Materlist
+              Masterlist
             </DarLink>
 
             <DarLink :active="$page.component === 'inquery'" href="/inquery">
@@ -102,7 +102,7 @@
                 />
               </svg>
 
-              Report
+              Reports
             </DarLink>
           </div>
         </nav>

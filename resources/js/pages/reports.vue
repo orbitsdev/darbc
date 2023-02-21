@@ -2,7 +2,7 @@
 
 <template>
     <div>
-            Reports
+            <DarTable/>
     </div>
 </template>
 

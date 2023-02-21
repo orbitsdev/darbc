@@ -33,7 +33,7 @@
               <div class="bg-white  px-6 pt-6">
                 <div>
                   <h2 id="payment-details-heading" class="text-lg font-medium leading-6 text-gray-900">Available Searchable fields </h2>
-                  <p class="mt-1 text-sm text-gray-500">Base in yout input it will filter the table</p>
+                  <p class="mt-1 text-sm text-gray-500">Base in your input it will filter the table</p>
                 </div>
 
                 <div class="mt-6 grid grid-cols-4 gap-6">

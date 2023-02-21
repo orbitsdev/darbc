@@ -1,9 +1,9 @@
 {
-  "_adminlayout-26a2b5e8.js": {
+  "_adminlayout-7addb039.js": {
     "css": [
       "assets/adminlayout-bdc5683c.css"
     ],
-    "file": "assets/adminlayout-26a2b5e8.js",
+    "file": "assets/adminlayout-7addb039.js",
     "imports": [
       "resources/js/app.js"
     ]
@@ -33,32 +33,32 @@
       "resources/js/pages/masterlist.vue",
       "resources/js/pages/reports.vue"
     ],
-    "file": "assets/app-f1278bda.js",
+    "file": "assets/app-35f80b40.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   },
   "resources/js/pages/calendar.vue": {
-    "file": "assets/calendar-562f5459.js",
+    "file": "assets/calendar-8b8ba0b6.js",
     "imports": [
-      "_adminlayout-26a2b5e8.js",
+      "_adminlayout-7addb039.js",
       "resources/js/app.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/pages/calendar.vue"
   },
   "resources/js/pages/dashboard.vue": {
-    "file": "assets/dashboard-97677e11.js",
+    "file": "assets/dashboard-2fffaf82.js",
     "imports": [
-      "_adminlayout-26a2b5e8.js",
+      "_adminlayout-7addb039.js",
       "resources/js/app.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/pages/dashboard.vue"
   },
   "resources/js/pages/inquery.vue": {
-    "file": "assets/inquery-bf898052.js",
+    "file": "assets/inquery-5ca05327.js",
     "imports": [
-      "_adminlayout-26a2b5e8.js",
+      "_adminlayout-7addb039.js",
       "resources/js/app.js"
     ],
     "isDynamicEntry": true,
@@ -72,7 +72,7 @@
     "css": [
       "assets/login-eb6d126e.css"
     ],
-    "file": "assets/login-cd503cc6.js",
+    "file": "assets/login-6456849c.js",
     "imports": [
       "resources/js/app.js"
     ],
@@ -87,18 +87,18 @@
     "css": [
       "assets/masterlist-5d9b1ac8.css"
     ],
-    "file": "assets/masterlist-a81f5e58.js",
+    "file": "assets/masterlist-b2ed5a6d.js",
     "imports": [
       "resources/js/app.js",
-      "_adminlayout-26a2b5e8.js"
+      "_adminlayout-7addb039.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/pages/masterlist.vue"
   },
   "resources/js/pages/reports.vue": {
-    "file": "assets/reports-32d69b46.js",
+    "file": "assets/reports-c4582150.js",
     "imports": [
-      "_adminlayout-26a2b5e8.js",
+      "_adminlayout-7addb039.js",
       "resources/js/app.js"
     ],
     "isDynamicEntry": true,

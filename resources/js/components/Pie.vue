@@ -12,7 +12,7 @@ export default {
 
     colors: {
       type: Array,
-      default: ["#29178f", "#4529aa", "#5f3bc6", "#794ee2", "#9361ff", "#5d0e55"],
+      default: ["#3f84e5", "#609966", "#C04A82", "#DC8449", "#9361ff", "#FFB84C"],
     },
     radius: {
       type: Array,

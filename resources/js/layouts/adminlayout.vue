@@ -63,7 +63,7 @@
                 />
               </svg>
 
-              Inquery
+              Inquiry
             </DarLink>
 
             <DarLink :active="$page.component === 'calendar'" href="/calendar">

@@ -189,13 +189,7 @@ function toggle() {
               <option value="">Polomolok</option>
             </select>
           </div>
-          <div class="border">
-            <select
-              class="border py-0.5 px-2 rounded bg-gray-200 min-w-96 border-gray-400 mx-1"
-            >
-              <option value="">Hectars</option>
-            </select>
-          </div>
+          
           <div class="border">
             <select
               class="border py-0.5 px-2 rounded bg-gray-200 min-w-96 border-gray-400 mx-1"

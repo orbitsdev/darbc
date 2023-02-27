@@ -1,30 +1,22 @@
-
-
-
 <template>
   <div ref="chart" style="width: 100%; height: 500px;"></div>
 </template>
 
 <script>
 export default {
-     props: {
+  props: {
     title: {
       type: String,
       default: "Bar",
     },
-
-
-
     colors: {
       type: Array,
-            default: ["#609966", "#C04A82", "#DC8449", "#9361ff", "#FFB84C"],
-
+      default: ["#29178f", "#4529aa", "#5f3bc6", "#794ee2", "#9361ff"],
     },
     radius: {
       type: Array,
-        default:  [0, 140],
+      default: [0, 140],
     },
-
     data: {
       type: Object,
       default: {
@@ -36,11 +28,9 @@ export default {
         ],
       },
     },
-
-
   },
   mounted() {
-       const chart = this.$echarts.init(this.$refs.chart);
+    const chart = this.$echarts.init(this.$refs.chart);
     chart.setOption({
       color: this.colors,
       title: {
@@ -62,6 +52,13 @@ export default {
         {
           data: this.data.value,
           type: "bar",
+          itemStyle: {
+            // Set the color of each bar in the chart
+            color: (params) => {
+              const colorList = this.colors;
+              return colorList[params.dataIndex % colorList.length];
+            },
+          },
           label: {
             show: true,
             position: "top",
@@ -69,6 +66,6 @@ export default {
         },
       ],
     });
-  }
-}
+  },
+};
 </script>

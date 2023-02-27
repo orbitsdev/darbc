@@ -188,6 +188,12 @@
         <li
           class="relative  py-5 px-6 focus-within:ring-2 focus-within:ring-inset focus-within:ring-blue-600 "
         >
+         <div class="flex items-start border-b py-2">
+              <p class="lg:w-48 border-r mr-2 text-sm text-gray-900">Status</p>
+              <div class="font-rubik text-black uppercase text-sm tex t-right">
+                Unplanted
+              </div>
+            </div>
           <div class="">
             <div class="flex items-start border-b py-2">
               <p class="lg:w-48 border-r mr-2 text-sm text-gray-900">No.</p>
@@ -260,14 +266,22 @@
                 <p class="text-sm uppercase">None</p>
               </div>
             </div>
+
+           
           </div>
         </li>
       </ul>
     </section>
     <section class=" ">
     
-      <p class="font-rubik text-xl font-bold uppercase px-6">Tax</p>
-
+      <div class="px-6 ">
+      <p class="font-rubik text-xl font-bold uppercase mv-2">Tax</p>
+        <select id="location" name="location" class="w-40 border mt-2 block  rounded-md border-gray-300 py-2 pl-3 pr-10 text-base focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm">
+    <option>2023</option>
+    <option selected>2022</option>
+    <option>2021</option>
+  </select>
+      </div>
       <ul role="list" class="divide-y divide-gray-200  border-gray-200">
         <li
           class="relative  py-5 px-6 focus-within:ring-2 focus-within:ring-inset focus-within:ring-blue-600 "

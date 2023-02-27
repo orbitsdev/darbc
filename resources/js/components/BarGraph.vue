@@ -17,7 +17,8 @@ export default {
 
     colors: {
       type: Array,
-      default: ["#29178f", "#4529aa", "#5f3bc6", "#794ee2", "#9361ff"],
+            default: ["#609966", "#C04A82", "#DC8449", "#9361ff", "#FFB84C"],
+
     },
     radius: {
       type: Array,
@@ -39,33 +40,34 @@ export default {
 
   },
   mounted() {
-    const chart = this.$echarts.init(this.$refs.chart);
+       const chart = this.$echarts.init(this.$refs.chart);
     chart.setOption({
-        color: this.colors,
-        title: {
+      color: this.colors,
+      title: {
         text: this.title,
         left: "center",
         top: 0,
       },
       xAxis: {
-        type: 'category',
-        data: this.data.labels
+        type: "category",
+        data: this.data.labels,
       },
       yAxis: {
-        type: 'value'
+        type: "value",
       },
       tooltip: {
-        trigger: 'axis'
+        trigger: "axis",
       },
-      series: [{
-        data: this.data.value,
-        type: 'bar',
-        
-        label: {
-          show: true,
-          position: 'top'
-        }
-      }]
+      series: [
+        {
+          data: this.data.value,
+          type: "bar",
+          label: {
+            show: true,
+            position: "top",
+          },
+        },
+      ],
     });
   }
 }

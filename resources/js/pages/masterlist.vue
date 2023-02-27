@@ -6,6 +6,7 @@ const showDialog = ref(false);
 const showSearch = ref(false);
 const showDetails = ref(false);
 const showActual = ref(false);
+const showUpdate = ref(false);
 const showDraw = ref(false);
 const isSideBarOpen = ref(false);
 
@@ -178,9 +179,9 @@ function toggle() {
          
         </div>
       </section>
-      <div>
+      <div class="mt-4">
 
-      <div class="flex items-center justify-between"> 
+      <!-- <div class="flex items-center justify-between"> 
         <div class="mt-2 py-1 rounded flex items-center justify-start mb-2">
           <div class="border">
             <select
@@ -213,10 +214,8 @@ function toggle() {
           </div>
           
         </div>
-        <!-- <DarButton class="">
-          <i class="fa-solid fa-file-contract mr-2 "></i> Actual </DarButton
-        > -->
-      </div>
+       
+      </div> -->
     
     </div>
 
@@ -225,6 +224,7 @@ function toggle() {
           @click="showSideBar"
           @showDetails="showDetails = true"
           @showDraw="showDraw = true"
+          @showUpdate="toggle "
         ></DarTable>
         <div class="py-2 flex items-center justify-between">
           <p class="text-xs py-1">Showing 1 to 10 results</p>

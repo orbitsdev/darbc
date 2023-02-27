@@ -9,14 +9,6 @@ export default {
       type: String,
       default: "Bar",
     },
-    colors: {
-      type: Array,
-      default: ["#29178f", "#4529aa", "#5f3bc6", "#794ee2", "#9361ff"],
-    },
-    radius: {
-      type: Array,
-      default: [0, 140],
-    },
     data: {
       type: Object,
       default: {
@@ -32,40 +24,36 @@ export default {
   mounted() {
     const chart = this.$echarts.init(this.$refs.chart);
     chart.setOption({
-      color: this.colors,
       title: {
         text: this.title,
         left: "center",
         top: 0,
       },
       xAxis: {
-        type: "category",
-        data: this.data.labels,
+        type: 'category',
+        data: this.data.labels
       },
       yAxis: {
-        type: "value",
+        type: 'value'
       },
       tooltip: {
-        trigger: "axis",
+        trigger: 'axis'
       },
-      series: [
-        {
-          data: this.data.value,
-          type: "bar",
-          itemStyle: {
-            // Set the color of each bar in the chart
-            color: (params) => {
-              const colorList = this.colors;
-              return colorList[params.dataIndex % colorList.length];
-            },
-          },
-          label: {
-            show: true,
-            position: "top",
-          },
+      series: [{
+        data: this.data.value,
+        type: 'bar',
+        itemStyle: {
+          color: function(params) {
+            const colorList = ["#3f84e5", "#609966", "#C04A82", "#DC8449", "#9361ff", "#FFB84C","#DC8449", "#9361ff",];
+            return colorList[params.dataIndex];
+          }
         },
-      ],
+        label: {
+          show: true,
+          position: 'top'
+        }
+      }]
     });
-  },
-};
+  }
+}
 </script>

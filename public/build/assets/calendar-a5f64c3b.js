@@ -1,1 +1,0 @@
-import{a as e}from"./adminlayout-5538d3fb.js";import{_ as o,c as t,a as r,r as n,o as s}from"./app-350beb0f.js";const c={layout:e},l={class:"bg-white p-6"};function _(p,d,i,m,u,f){const a=n("DarFullCalendar");return s(),t("div",l,[r(a)])}const x=o(c,[["render",_]]);export{x as default};

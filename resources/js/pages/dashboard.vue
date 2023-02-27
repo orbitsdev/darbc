@@ -30,12 +30,12 @@ export default {
   data() {
     return {
         data1:  {
-        labels: ["Loss in Case", "Cloa", "Needs","Wants",],
+        labels: ["Loss in Case", "Cloa", "Leased","Qc",],
         value: [
           { value: 128, name: "Loss in Case" },
           { value: 25, name: "Cloa" },
-          { value: 240, name: "Needs" },
-          { value: 28, name: "Wants" },
+          { value: 240, name: "Leased" },
+          { value: 28, name: "Qc" },
         ],
       },
         data2:  {

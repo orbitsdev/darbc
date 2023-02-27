@@ -15,14 +15,36 @@ export default {
     return {
       
       calendarOptions: {
+        
         plugins: [
           listPlugin,
           dayGridPlugin,
           timeGridPlugin,
           interactionPlugin // needed for dateClick
         ],
+
+         customButtons: {
+    add: {
+      text: 'Add',
+      click: function() {
+        alert('clicked the Add button!');
+      }
+    },
+    update: {
+      text: 'Update',
+      click: function() {
+        alert('clicked the Update button!');
+      }
+    },
+    delete: {
+      text: 'Delete',
+      click: function() {
+        alert('clicked the Dele button!');
+      }
+    },
+  },
         headerToolbar: {
-          left: 'prev,next today',
+          left: 'add update delete prev,next today',
           center: 'title',
           right: 'dayGridMonth,timeGridWeek,timeGridDay, listDay'
         },

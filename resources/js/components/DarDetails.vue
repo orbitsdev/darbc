@@ -632,7 +632,7 @@ function closeForm(){
                   </div>
                 </div>
                 <div class="flex items-start border-b py-2">
-                  <p class="lg:w-48 border-r mr-2 text-sm text-gray-600">Offica Reciept</p>
+                  <p class="lg:w-48 border-r mr-2 text-sm text-gray-600">Official Reciept</p>
                   <div class="font-rubik text-black uppercase text-sm text-right">
                        229436
                   </div>

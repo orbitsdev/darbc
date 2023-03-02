@@ -15,7 +15,6 @@
 
 }
 
-
 .dr-bg-purple{
     background:#220068 !important;
 }
@@ -35,3 +34,89 @@
 .dr-text-purple-100{
     color: #643ab9 ;
 }
+
+
+
+.dartable th {
+
+    white-space: nowrap;
+    padding: 8px 16px;
+  }
+.cth {
+  min-width: 200px;
+  max-width: 300px;
+    white-space: normal !important;
+    padding: 8px 16px;
+  }
+
+.dartable td{
+    padding:2px 4px ;
+    vertical-align: middle;
+}
+
+.ctd{
+  max-width: 300px;
+  min-width: 200px;
+
+}
+.ctdlng{
+  max-width: 500px;
+  min-width: 600px;
+  font-size: 12px;
+  padding: 6px 2px ;
+
+}
+
+.dartable{
+    max-height: 75vh;
+}
+  
+.darscroll::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+
+    background-color: #f5f5f5;
+}
+
+.darscroll::-webkit-scrollbar-thumb {
+
+    background-color: #c0b8c8;
+    border-radius: 4px;
+    opacity: 0;
+  
+    transition: opacity 0.5s;
+  }
+  
+  .darscroll:hover::-webkit-scrollbar-thumb {
+    opacity: 1;
+  
+  }
+  
+  .darscroll:hover::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background-color: #f5f5f5;
+  }
+  
+  .darscroll:hover::-webkit-scrollbar-thumb {
+    background-color: #c1c1c1;
+    border-radius: 4px;
+   
+  }
+  
+  .darscroll:hover::-webkit-scrollbar-track {
+    background-color: #f5f5f5;
+    border-radius: 4px;
+  }
+
+
+  .dar-max-h{
+
+  }
+
+
+  
+.dardialog{
+    max-height:  80vh !important;
+    
+  }

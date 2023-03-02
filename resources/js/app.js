@@ -53,6 +53,8 @@ import  Pie2 from './components/Pie2.vue';
 import  BarGraph from './components/BarGraph.vue';
 import  DarDetails from './components/DarDetails.vue';
 import  DarFullCalendar from './components/DarFullCalendar.vue';
+import  Pagination from './components/Pagination.vue';
+import  SterpCard from './components/SterpCard.vue';
 // import  VEscheduleCalendar from './components/VEscheduleCalendar.vue';
 import {Link} from '@inertiajs/vue3';
 
@@ -85,6 +87,8 @@ createInertiaApp({
     .component('BarGraph', BarGraph)
     .component('DarTable2', DarTable2)
     .component('DarFullCalendar', DarFullCalendar)
+    .component('Pagination', Pagination)
+    .component('SterpCard', SterpCard)
     .component('DarDetails', DarDetails);
 
     new WaveUI(app, {

@@ -13,10 +13,13 @@
         :fullscreen="fullScreen"
         title=""
       >
-      <div class="dardialog">
+      <div class="">
 
           <slot> </slot>
       </div>
+        <div class="py-2">
+      <slot name="actions"></slot>
+        </div>
       </w-dialog>
 </template>
 
@@ -68,7 +71,4 @@
 <style lang="scss" scoped>
 
 
-.dardialog{
-    max-height: 87vh !important;
-  }
 </style>

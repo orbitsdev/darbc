@@ -1,8 +1,9 @@
 
 
 <template>
-    <div>
-            <DarTable/>
+    <div class="h-screen flex justify-center items-center flex-col">
+         <p class="py-5 text-4xl font-bold uppercase ">  DARBC LAND REPORTS </p>
+          <img src="/assets/reports.svg" alt="">
     </div>
 </template>
 
@@ -17,5 +18,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+  
 </style>

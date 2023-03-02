@@ -1,9 +1,9 @@
 {
-  "_adminlayout-0ad25a95.js": {
+  "_adminlayout-bdaafa09.js": {
     "css": [
       "assets/adminlayout-8f27581c.css"
     ],
-    "file": "assets/adminlayout-0ad25a95.js",
+    "file": "assets/adminlayout-bdaafa09.js",
     "imports": [
       "resources/js/app.js"
     ]
@@ -13,17 +13,17 @@
     "src": "adminlayout.css"
   },
   "resources/css/app.css": {
-    "file": "assets/app-f97c9444.css",
+    "file": "assets/app-60246cb0.css",
     "isEntry": true,
     "src": "resources/css/app.css"
   },
   "resources/js/app.css": {
-    "file": "assets/app-9e9b386f.css",
+    "file": "assets/app-7b52edf8.css",
     "src": "resources/js/app.css"
   },
   "resources/js/app.js": {
     "css": [
-      "assets/app-9e9b386f.css"
+      "assets/app-7b52edf8.css"
     ],
     "dynamicImports": [
       "resources/js/pages/calendar.vue",
@@ -33,32 +33,32 @@
       "resources/js/pages/masterlist.vue",
       "resources/js/pages/reports.vue"
     ],
-    "file": "assets/app-2cb1e759.js",
+    "file": "assets/app-212424dd.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   },
   "resources/js/pages/calendar.vue": {
-    "file": "assets/calendar-3bd227a5.js",
+    "file": "assets/calendar-67d445ec.js",
     "imports": [
-      "_adminlayout-0ad25a95.js",
+      "_adminlayout-bdaafa09.js",
       "resources/js/app.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/pages/calendar.vue"
   },
   "resources/js/pages/dashboard.vue": {
-    "file": "assets/dashboard-ad1865a0.js",
+    "file": "assets/dashboard-215a47ec.js",
     "imports": [
-      "_adminlayout-0ad25a95.js",
+      "_adminlayout-bdaafa09.js",
       "resources/js/app.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/pages/dashboard.vue"
   },
   "resources/js/pages/inquery.vue": {
-    "file": "assets/inquery-fecda6eb.js",
+    "file": "assets/inquery-f422a26b.js",
     "imports": [
-      "_adminlayout-0ad25a95.js",
+      "_adminlayout-bdaafa09.js",
       "resources/js/app.js"
     ],
     "isDynamicEntry": true,
@@ -72,7 +72,7 @@
     "css": [
       "assets/login-eb6d126e.css"
     ],
-    "file": "assets/login-7d82417e.js",
+    "file": "assets/login-42656216.js",
     "imports": [
       "resources/js/app.js"
     ],
@@ -80,25 +80,25 @@
     "src": "resources/js/pages/login.vue"
   },
   "resources/js/pages/masterlist.css": {
-    "file": "assets/masterlist-d00b29d8.css",
+    "file": "assets/masterlist-4049d3d1.css",
     "src": "resources/js/pages/masterlist.css"
   },
   "resources/js/pages/masterlist.vue": {
     "css": [
-      "assets/masterlist-d00b29d8.css"
+      "assets/masterlist-4049d3d1.css"
     ],
-    "file": "assets/masterlist-859ceae3.js",
+    "file": "assets/masterlist-1c8acf48.js",
     "imports": [
       "resources/js/app.js",
-      "_adminlayout-0ad25a95.js"
+      "_adminlayout-bdaafa09.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/pages/masterlist.vue"
   },
   "resources/js/pages/reports.vue": {
-    "file": "assets/reports-11243fc7.js",
+    "file": "assets/reports-51123ebb.js",
     "imports": [
-      "_adminlayout-0ad25a95.js",
+      "_adminlayout-bdaafa09.js",
       "resources/js/app.js"
     ],
     "isDynamicEntry": true,

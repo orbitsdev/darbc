@@ -674,7 +674,7 @@ function closeForm(){
                   </div>
                 </div>
                 <div class="flex items-start border-b py-2">
-                  <p class="lg:w-48 border-r mr-2 text-sm text-gray-600">
+                  <p class="lg:w-48 border-r mr-2 text-sm text-gray-600 leading-4">
                     NDC DIRECT PAYMENT SCHEME
                   </p>
                   <div class="font-rubik text-black uppercase text-sm text-right bg-green-600 text-white px-2 rounded ">
@@ -690,7 +690,7 @@ function closeForm(){
                 </div>
                 <div class="flex items-start border-b py-2">
                   <p class="lg:w-48 border-r mr-2 text-sm text-gray-600">NOTES</p>
-                  <div class="font-rubik text-black uppercase text-sm left ">
+                  <div class="ctd font-rubik text-black leading-5 text-sm left ">
                     DEED OF SALE (ALFREDO RADAZA-NDC) ORIGINAL CERTIFICATE TITLE P-21334 5 HA. IN DEED OF SALE AND 3.6HA IN DEED OF AWARD AND TRANSFER 1.4 HA LEASED CONTRACT TO DOLEFIL BETWEEN RADAZA. 
                   </div>
                 </div>

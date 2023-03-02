@@ -1,1 +1,0 @@
-import{a as e}from"./adminlayout-0ad25a95.js";import{_ as a,c as t,a as r,r as n,o as s}from"./app-2cb1e759.js";const c={layout:e};function p(l,_,m,d,f,i){const o=n("DarTable");return s(),t("div",null,[r(o)])}const x=a(c,[["render",p]]);export{x as default};

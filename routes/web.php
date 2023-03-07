@@ -1,9 +1,10 @@
 <?php
 
-use App\Http\Controllers\LandController;
-use App\Http\Controllers\MasterListController;
 use Inertia\Inertia;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FileController;
+use App\Http\Controllers\LandController;
+use App\Http\Controllers\MasterListController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,3 +42,11 @@ Route::group(['as'=>'land.'], function () {
     Route::post('/lot', [LandController::class, 'create']);
 
 });
+
+
+
+
+Route::post('file/upload', [FileController::class, 'uploadLocal'])->name('file.upload.local');
+Route::delete('file/delete', [FileController::class, 'deleteLocal'])->name('file.delete.local');
+Route::post('file/import', [FileController::class, 'importFile'])->name('file.import');
+

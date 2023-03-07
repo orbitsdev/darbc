@@ -58,6 +58,7 @@ import  SterpCard from './components/SterpCard.vue';
 import  InputField from './components/InputField.vue';
 import  SaveButton from './components/SaveButton.vue';
 import  Spinner1 from './components/Spinner1.vue';
+import  FileUploadBase from './components/FileUploadBase.vue';
 // import  VEscheduleCalendar from './components/VEscheduleCalendar.vue';
 import {Link} from '@inertiajs/vue3';
 
@@ -79,6 +80,7 @@ createInertiaApp({
   resolve: (name) => resolvePageComponent(`./pages/${name}.vue`, import.meta.glob('./pages/**/*.vue')),
   setup({ el, App, props, plugin }) {
     const app = createApp({ render: () => h(App, props) })
+    .mixin({methods: {route}})    
     .use(plugin)
     // .use(VCalendar)
     .component('DarNavigation', DarNavigation)
@@ -98,6 +100,7 @@ createInertiaApp({
     .component('InputField', InputField)
     .component('SaveButton', SaveButton)
     .component('Spinner1', Spinner1)
+    .component('FileUploadBase', FileUploadBase)
     .component('DarDetails', DarDetails);
 
     new WaveUI(app, {

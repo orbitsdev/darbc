@@ -33,11 +33,16 @@
         "@vue/compiler-sfc": "^3.2.47",
         "echarts": "^5.4.1",
         "element-plus": "^2.2.30",
+        "filepond": "^4.30.4",
+        "filepond-plugin-file-poster": "^2.5.1",
+        "filepond-plugin-file-validate-type": "^1.2.8",
+        "filepond-plugin-image-preview": "^4.6.11",
         "moment": "^2.29.4",
         "postcss-class-prefix": "^0.2.0",
         "postcss-cli": "^10.1.0",
         "v-calendar": "^3.0.0-alpha.8",
         "vue-echarts": "^6.5.4",
+        "vue-filepond": "^7.0.3",
         "vuetify": "^3.1.4",
         "wave-ui": "^2.48.0"
     }

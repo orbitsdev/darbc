@@ -62,35 +62,33 @@
             </div>
           </div>
 
-          <!--          
+                   
 
           <div>
             <div class="block">
               <nav class="flex space-x-4" aria-label="Tabs">
-                <a
+
+                <div
+                @click="changeTab(tab.index)"
+                v-for="tab in tabs" :key="tab"
                   href="#"
-                  class="cursor-pointer bg-purple-50 text-purple-800 rounded px-2 border py-2 text-xs font-medium"
+                  :class="[tab.index === selected_tab ?  'cursor-pointer bg-gray-50 text-gray-800 rounded px-2 border py-2 text-xs font-medium' : 'cursor-pointer text-gray-500 hover:bg-gray-100 hover:border border border-transparent hover:text-gray-700 rounded px-2 py-2 text-xs']"
                   aria-current="page"
-                  >Polomolok</a
+                  >{{tab.label}}</div
                 >
 
-                <a
-                  href="#"
-                  class="cursor-pointer text-gray-500 hover:bg-gray-100 hover:border border border-transparent hover:text-gray-700 rounded px-2 py-2 text-xs"
-                  >Tupi
-                </a>
 
-                <a
+                <!-- <a
                   href="#"
                   class="cursor-pointer text-gray-500 hover:bg-gray-100 hover:border border border-transparent hover:text-gray-700 rounded px-2 py-2 text-xs"
-                  >Gensan</a
-                >
+                  >Land Status</a
+                > -->
               </nav>
             </div>
-          </div> -->
+          </div>
 
-          <div class="grid grid-cols-2 gap-2">
-            <aside class="">
+          <div class="mt-2 grid grid-cols-2 gap-2">
+            <aside class="col-span-2 dar-ov " v-if="selected_tab === 1">
             <div class="mt-2 ">
                 <div class="flow-root">
                   <div class="overflow-x-auto">
@@ -409,7 +407,7 @@
               </div>
             </aside>
 
-            <aside>
+            <aside class="col-span-2 dar-ov " v-if="selected_tab === 2">
 
             
             <div class="mt-2 ">
@@ -545,8 +543,26 @@
 import adminlayout from "../layouts/adminlayout.vue";
 export default {
   layout: adminlayout,
+  methods: {
+    changeTab(tab) {
+      this.selected_tab = tab;
+    },
+  },
   data() {
     return {
+
+      selected_tab: 1,
+
+      tabs: [
+        {
+          index:1,
+          label: 'Area Status',
+        },
+        {
+          index:2,
+          label: 'Land Status',
+        },
+      ],
       data1: {
         labels: [
           "information 1",

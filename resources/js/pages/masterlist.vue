@@ -1,8 +1,22 @@
-<script setup>
-import { ref , defineComponent} from "vue";
 
-import LotForm from '@/components/LotFrom.vue';
-const items = ref([1, 2, 3, 4, 5, 1, 2, 3, 4, 51, 2, 3, 4, 51, 2, 3, 4, 5]);
+
+
+
+<script setup>
+import { ref, defineComponent, defineProps } from "vue";
+
+import LotForm from "@/components/LotForm.vue";
+
+const props = defineProps({
+  items: Object,
+  // filters: Object,
+});
+
+
+
+const items  = ref(props.items);
+const search = ref("");
+
 const show_dialog = ref(false);
 const show_search = ref(false);
 
@@ -11,15 +25,11 @@ const show_update = ref(false);
 const show_draw = ref(false);
 const is_sidebar_open = ref(false);
 
-
-
+const lands = ref([]);
 
 function showSideBar() {
   is_sidebar_open.value = true;
-
-
 }
-const search = ref("");
 
 function toggle() {
   show_dialog.value = !show_dialog.value;
@@ -27,6 +37,11 @@ function toggle() {
 </script>
 
 <template>
+
+
+  <!-- {{ items.data }} -->
+
+
   <section class="flex justify-between">
     <div class="flex-1 mr-4 relative">
       <div class="flex items-center">
@@ -217,13 +232,16 @@ function toggle() {
   </div>
 
   <div class="mb-20">
-    <DarTable   @click="showSideBar"  @showDetails="show_details = true" @showDraw="show_draw = true"> </DarTable>
-    
+    <DarTable
+      :items="props.items"
+      @click="showSideBar"
+      @showDetails="show_details = true"
+      @showDraw="show_draw = true"
+    >
+    </DarTable>
   </div>
 
   <LotForm :isOpen="show_dialog" @close="show_dialog = false" />
-
-
 </template>
 <script>
 import adminlayout from "../layouts/adminlayout.vue";

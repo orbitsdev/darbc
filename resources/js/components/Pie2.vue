@@ -1,5 +1,5 @@
 <template>
-  <div ref="chart" style="width: 100%; height: 500px"></div>
+  <div ref="chart" style="width: 100%; height: 340px"></div>
 </template>
 
 <script>
@@ -44,9 +44,10 @@ export default {
     chart.setOption({
       color: this.colors,
       title: {
-        text: this.title,
+        // text: this.title,
+        text: null,
         left: "center",
-        top: 60,
+        top: 24,
       },
       label: {
         formatter: "{b}: {c} ({d}%)",
@@ -56,27 +57,26 @@ export default {
         trigger: "item",
         formatter: "{b}:  ({d}%)",
       },
-      legend: {
-        orient: "vertical",
-        right: 24,
-        top: "middle",
-        data: this.data.labels,
-        textStyle: {
-          color: "#333",
-        },
-      },
+      // legend: {
+      //   orient: "vertical",
+      //   right: 20,
+      //   top: "middle",
+      //   data: this.data.labels,
+      //   textStyle: {
+      //     color: "#333",
+      //   },
+      // },
       series: [
         {
           type: "pie",
           radius: this.radius,
           data: this.data.value,
-          label:  { 
-           formatter: "{b} ({d}%)",
-      position: 'inner',
-      fontSize: 14,
-      color: 'white'
-          
-    },
+          label: {
+            formatter: "{b} ({d}%)",
+            position: "inner",
+            fontSize: 14,
+            color: "white",
+          },
         },
       ],
     });

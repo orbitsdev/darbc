@@ -1,6 +1,17 @@
 
 
+
+
+
+
+
+
+
+
+
+
 <template>
+
 
     <button :class="['font-roboto text-sm rounded transition-all ease-in-out  px-4 ', color ]"> <slot> Click Me</slot></button>
 </template>

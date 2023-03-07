@@ -1,9 +1,23 @@
 
 
+
+
+
+
 <script setup>
-  import {ref, defineEmits, defineComponent} from 'vue';
+  import {ref, defineEmits, defineComponent, defineProps} from 'vue';
+
+
+const props = defineProps({
+  items: Object,
+});
 
   const  items = ref([1, 2, 3, 4, 5,1, 2, 3, 4, 6,7,8,0,2,3]);
+
+
+
+
+  
   const emit = defineEmits(['itemClick','showDetails','showUpdate', 'showDraw']);
 
 
@@ -12,12 +26,14 @@
 </script>
 
 <template>
+
+
     <section  class=" dartable overflow-x-auto ">
         <table class=" w-full overflow-y-auto overflow-x-auto  divide-y divide-gray-600 table-auto">
           <thead
-            class="sticky  top-0 dr-bg-purple-active text-gray-300 divide-y divide-gray-200 bg-white"
+            class="sticky  top-0 dr-bg-purple-active text-gray-300   divide-y divide-gray-200 bg-white"
           >
-            <tr class=" divide-y divide-gray-600  top-0 dr-bg-purple-active">
+            <tr class=" divide-y divide-gray-600 divide-x  top-0 dr-bg-purple-active">
               <th class="text-center text-sm font-roboto uppercase">No.</th>
               <th class="text-center text-sm font-roboto uppercase">Lot#</th>
               <th class="cth text-center text-sm font-roboto uppercase">Survey No.</th>
@@ -46,7 +62,7 @@
               <th class="text-center text-sm font-roboto uppercase">Notes</th>
               <th class="text-center text-sm font-roboto uppercase"></th>
             </tr>
-            <tr class="sticky divide-y divide-gray-600  top-0 dr-bg-purple-active">
+            <tr class="sticky divide-y divide-gray-600  divide-x  top-0 dr-bg-purple-active">
               <th class="text-center text-sm font-roboto uppercase"></th>
               <th class="text-center text-sm font-roboto uppercase"></th>
               <th class="text-center text-sm font-roboto uppercase"></th>
@@ -61,11 +77,11 @@
               <th class="text-center text-sm font-roboto uppercase"></th>
               <th class="text-center text-sm font-roboto uppercase">
                 <section class="grid grid-cols-2">
-                  <div class="text-left">
+                  <div class="flex items-center justify-center ">
                     <p class="text-left">Area</p>
                   </div>
                   <div class=" ">
-                    <p class="text-right">Variance</p>
+                    <p class="flex items-center justify-center ">Variance</p>
                   </div>
 
                 </section>
@@ -73,11 +89,11 @@
 
                <th class="cth text-center text-sm font-roboto uppercase">
                 <section class="grid grid-cols-2">
-                  <div class="text-left">
+                  <div class="flex items-center justify-center ">
                     <p class="leading-4 text-center">Type Of Title</p>
                   </div>
-                  <div class=" ">
-                    <p class="leading-4 text-center "> No.</p>
+                  <div class="flex items-center justify-center ">
+                    <p class="leading-4  "> No.</p>
                   </div>
 
                 </section>
@@ -98,7 +114,7 @@
             </tr>
           </thead>
           <tbody class="bg-white  divide-gray-600">
-            <tr @click="show_details = true"  class="divide-x cursor-pointer hover:bg-purple-200 transition-all   " v-for="(item, index) in items" :key="item" :class="[index % 2 ===0 ? '':'bg-gray-100']">
+            <tr @dblclick="show_details = true"  class="divide-x cursor-pointer hover:bg-purple-200 transition-all   " v-for="(item, index) in items" :key="item" :class="[index % 2 ===0 ? '':'bg-gray-100']">
                 <td class="text-center text-sm font-roboto uppercase ">16</td>
                 <td class="text-center text-sm font-roboto uppercase ">25</td>
                 <td class="ctd text-center text-sm font-roboto uppercase ">SWO-11-000012</td>
@@ -113,24 +129,24 @@
                 <td class="text-center text-sm font-roboto uppercase ">e</td>
                 <td class="text-center text-sm font-roboto uppercase ">
                   <section class="flex justify-center items-center">
-                    <div class="w-200 px-2">
+                    <div class="w-24 text-center ">
                       <p>21.97892</p>
                     </div>
                     <w-divider class="mx-2 bg-gray-100" vertical color=""></w-divider>
-                    <div class="w-200  px-2 ">
-                      <p>0.001</p>
+                    <div class="w-24 text-center   ">
+                     <p>0.001</p>
                     </div>
 
                   </section>
                 </td>
                 <td class="text-center text-sm font-roboto uppercase ">
                   <section class="flex justify-center items-center">
-                    <div class="w-200 px-2">
+                    <div class="w-24 text-center ">
                       <p>OCT</p>
                     </div>
                     <w-divider class="mx-2 bg-gray-100" vertical color=""></w-divider>
-                    <div class="w-200  px-2 ">
-                      <p>P-17221</p>
+                    <div class="w-24 text-center  ">
+                   <p>P-17221</p>
                     </div>
 
                   </section>
@@ -194,7 +210,8 @@
           </tbody>
         </table>
       </section>
-      <Pagination class=""/>
+
+      <Pagination   :links="items.links" class="mt-4"/>
 
         <DarDetails :is_open="show_details" @close_details="show_details = false"/>
 </template>

@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\LandController;
+use App\Http\Controllers\MasterListController;
 use Inertia\Inertia;
 use Illuminate\Support\Facades\Route;
 
@@ -23,9 +25,8 @@ Route::get('/login', function () {
 Route::get('/dashboard', function () {
     return Inertia::render('dashboard');
 });
-Route::get('/masterlist', function () {
-    return Inertia::render('masterlist');
-});
+
+Route::get('/masterlist', [MasterListController::class, 'index'])->name('masterlist.index');
 Route::get('/inquery', function () {
     return Inertia::render('inquery');
 });
@@ -34,4 +35,9 @@ Route::get('/calendar', function () {
 });
 Route::get('/reports', function () {
     return Inertia::render('reports');
+});
+
+Route::group(['as'=>'land.'], function () {
+    Route::post('/lot', [LandController::class, 'create']);
+
 });

@@ -55,6 +55,9 @@ import  DarDetails from './components/DarDetails.vue';
 import  DarFullCalendar from './components/DarFullCalendar.vue';
 import  Pagination from './components/Pagination.vue';
 import  SterpCard from './components/SterpCard.vue';
+import  InputField from './components/InputField.vue';
+import  SaveButton from './components/SaveButton.vue';
+import  Spinner1 from './components/Spinner1.vue';
 // import  VEscheduleCalendar from './components/VEscheduleCalendar.vue';
 import {Link} from '@inertiajs/vue3';
 
@@ -70,6 +73,9 @@ import interactionPlugin from '@fullcalendar/interaction';
 import * as echarts from 'echarts';
 
 createInertiaApp({
+  progress: {
+    color: '#5819d5',
+  },
   resolve: (name) => resolvePageComponent(`./pages/${name}.vue`, import.meta.glob('./pages/**/*.vue')),
   setup({ el, App, props, plugin }) {
     const app = createApp({ render: () => h(App, props) })
@@ -89,6 +95,9 @@ createInertiaApp({
     .component('DarFullCalendar', DarFullCalendar)
     .component('Pagination', Pagination)
     .component('SterpCard', SterpCard)
+    .component('InputField', InputField)
+    .component('SaveButton', SaveButton)
+    .component('Spinner1', Spinner1)
     .component('DarDetails', DarDetails);
 
     new WaveUI(app, {

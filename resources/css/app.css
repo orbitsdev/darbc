@@ -43,9 +43,11 @@
     padding: 8px 16px;
   }
 .cth {
-  min-width: 200px;
-  max-width: 300px;
-    white-space: normal !important;
+  white-space: nowrap;
+ 
+  min-width: 220px;
+  max-width: 400px;
+ 
     padding: 8px 16px;
   }
 
@@ -115,8 +117,28 @@
   }
 
 
+  .darpi-max-h{
+    max-height: 400px;
+  }
+
   
 .dardialog{
     max-height:  80vh !important;
     
+  }
+
+  .di-max-h{
+    max-height: 45vh;
+  }
+
+  .dar-ov{
+    max-height: 340px;
+    overflow-y: auto;
+  }
+
+  .dar-o-bg{
+    background: #E8DDD4;
+  }
+  .dar-o-text{
+    color: #64533c;
   }

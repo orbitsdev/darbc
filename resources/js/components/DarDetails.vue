@@ -3,7 +3,7 @@ import { ref, onMounted, defineProps, defineComponent, defineEmits } from "vue";
 
 
 
-import LotForm from '@/components/LotFrom.vue';
+import LotForm from '@/components/LotForm.vue';
 
 
 let props = defineProps({
@@ -677,7 +677,7 @@ function closeForm(){
                   <p class="lg:w-48 border-r mr-2 text-sm text-gray-600 leading-4">
                     NDC DIRECT PAYMENT SCHEME
                   </p>
-                  <div class="font-rubik text-black uppercase text-sm text-right bg-green-600 text-white px-2 rounded ">
+                  <div class="font-rubik  uppercase text-sm text-right bg-green-600 text-white px-2 rounded ">
 
                   FULLY PAID
                   </div>

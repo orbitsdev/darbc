@@ -51,17 +51,17 @@ class FileController extends Controller
         $headers = SimpleExcelReader::create($file_path)->getHeaders();
 
 
-        $rows->each(function(array $rowProperties) {
-                User::create([
-                    'name' => $rowProperties['name'],
-                    'email' => $rowProperties['email'],
-                    'password' =>  Hash::make('@admin2!!'),
-                ]);
-         });
+        // $rows->each(function(array $rowProperties) {
+        //         User::create([
+        //             'name' => $rowProperties['name'],
+        //             'email' => $rowProperties['email'],
+        //             'password' =>  Hash::make('@admin2!!'),
+        //         ]);
+        //  });
         
     
 
-        // dd($headers);
+        dd($headers);
         // dd($file_path);
 
         return redirect()->route('masterlist.index')->with('success', 'File imported successfully');

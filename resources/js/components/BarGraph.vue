@@ -1,14 +1,15 @@
 <template>
-  <div ref="chart" style="width: 100%; height: 500px;"></div>
+  <div ref="chart" style="width: 100%; height: 260px;"></div>
 </template>
 
 <script>
 export default {
   props: {
-    title: {
-      type: String,
-      default: "Bar",
-    },
+    // title: {
+    //   type: String,
+    //   default: '',
+      
+    // },
     data: {
       type: Object,
       default: {

@@ -4,9 +4,9 @@
 
 
 <template>
-  <div class="bg-gray-200 rounded-xl">
+  <div class="bg-gray-100 rounded-xl">
     <section class="grid grid-cols-12 gap-x-2">
-      <div class="col-span-5 ">
+      <div class="col-span-4 ">
         <section
           class="bg-white mb-2 darpi-max-h rounded-lg flex items-center justify-center relative"
         >
@@ -16,7 +16,7 @@
           <Pie
             class="flex items-center justify-center"
             :data="data1"
-            :radius="[0, 100]"
+            :radius="[0, 70]"
             :title="'DARBC LAND STATUS'"
           />
         </section>
@@ -31,13 +31,24 @@
           <Pie
             class="flex items-center justify-center"
             :data="data2"
-            :radius="[0, 100]"
+            :radius="[0, 70]"
             :title="'DARBC LAND'"
           />
         </section>
+        <section
+          class="bg-white mb-2 darpi-max-h rounded-lg flex items-center justify-center relative"
+        >
+       <div class="absolute top-2 left-4">
+            <p class="font-medium uppercase">MUNICIPALITIES</p>
+          </div>
+   <section class="   px-4 w-full  flex justify-center items-center">
+          <BarGraph  class="flex items-center justify-center" :data="bardata" :title="'SCOPED MUNICPALITIES'" />
+    </section>
+
+        </section>
       </div>
 
-      <section class="col-span-7 rounded-md bg-white py-4 px-2">
+      <section class="col-span-8 rounded-md bg-white py-4 px-2">
         <div class="flex items-center justify-center overflow-hidden">
           <img
             src="/assets/darbcmap3.jpg "
@@ -49,7 +60,7 @@
         <aside class="">
           <div class="flex items-center justify-center border relative h-2 mt-2">
             <p
-              class="font-medium uppercase text-center border py-1 px-2 absolute bg-gray-100 rounded text-sm "
+              class="font-medium uppercase text-center border py-1 px-2 absolute bg-gray-200 rounded text-sm "
             >
               Total LandHoldings
             </p>
@@ -58,13 +69,13 @@
           <div class="mt-4 flex justify-center items-center whitespace-normal">
             <div class="py-1 px-2 whitespace-normal">
               <!-- <p class="font-medium uppercase text-xs  rounded "> Total Land Holdings</p> -->
-              <p class="font-medium uppercase text-3xl word-break">9,086,8016,123</p>
+              <p class="font-medium uppercase text-2xl word-break">9,086,8016,123</p>
             </div>
           </div>
 
                    
 
-          <div>
+          <!-- <div>
             <div class="block">
               <nav class="flex space-x-4" aria-label="Tabs">
 
@@ -77,18 +88,12 @@
                   >{{tab.label}}</div
                 >
 
-
-                <!-- <a
-                  href="#"
-                  class="cursor-pointer text-gray-500 hover:bg-gray-100 hover:border border border-transparent hover:text-gray-700 rounded px-2 py-2 text-xs"
-                  >Land Status</a
-                > -->
               </nav>
             </div>
-          </div>
+          </div> -->
 
-          <div class="mt-2 grid grid-cols-2 gap-2">
-            <aside class="col-span-2 dar-ov " v-if="selected_tab === 1">
+          <div class="mt-2 grid grid-cols-2 gap-2 dar-ov ">
+            <aside class=" ">
             <div class="mt-2 ">
                 <div class="flow-root">
                   <div class="overflow-x-auto">
@@ -99,7 +104,7 @@
                             <th
                               colspan="3"
                               scope="colgroup"
-                              class="bg-gray-50 px-2 py-2  text-left text-xs font-semibold text-gray-900 "
+                              class="bg-gray-200 font-medium px-2 py-2  text-left text-xs   text-gray-900 "
                             >
                            Polomolok Area: <span class="ml-2 inline-block">6,669,4968</span>
                             
@@ -109,25 +114,25 @@
                             <th
                               colspan="col"
                               scope="colgroup"
-                              class=" py-2 pl-4 pr-3 text-left text-xs  text-gray-900 sm:pl-3"
+                              class=" py-2 pl-4 pr-3 text-left text-xs  text-gray-900 sm:pl-3  font-normal "
                             >
                               Status
                             </th>
                             <th
                               scope="col"
-                              class="px-2 py-1.5 leading-3 text-left text-xs  text-gray-900"
+                              class="px-2 py-1.5 leading-3 text-left text-xs  text-gray-900  font-normal "
                             >
                               Area in hectars
                             </th>
                             <th
                               scope="col"
-                              class="px-2 leading-3 py-1.5 text-left text-xs  text-gray-900"
+                              class="px-2 leading-3 py-1.5 text-left text-xs  text-gray-900  font-normal "
                             >
                               No. of lots
                             </th>
                           </tr>
 
-                          <tr class="bg-purple-50 border-t border-gray-200 bg--100">
+                          <tr class="bg-orange-50 border-t border-gray-200 bg--100">
                             <td
                               class="whitespace-nowrap  py-1.5 pl-4 pr-3 text-xs text-gray-900 sm:pl-3"
                             >
@@ -161,7 +166,7 @@
                               46
                             </td>
                           </tr>
-                          <tr class="bg-purple-50 border-t border-gray-200">
+                          <tr class="bg-orange-50 border-t border-gray-200">
                             <td
                               class="whitespace-nowrap py-1.5 pl-4 pr-3 text-xs text-gray-900 sm:pl-3"
                             >
@@ -201,7 +206,7 @@
                             <th
                               colspan="3"
                               scope="colgroup"
-                              class="bg-gray-50 px-2 py-2  text-left text-xs font-semibold text-gray-900 "
+                              class="bg-gray-200 font-medium px-2 py-2  text-left text-xs   text-gray-900 "
                             >
                            Tupi Area: <span class="ml-2 inline-block">6,669,4968</span>
                             
@@ -211,25 +216,25 @@
                             <th
                               colspan="col"
                               scope="colgroup"
-                              class=" py-2 pl-4 pr-3 text-left text-xs  text-gray-900 sm:pl-3"
+                              class=" py-2 pl-4 pr-3 text-left text-xs  text-gray-900 sm:pl-3  font-normal "
                             >
                               Status
                             </th>
                             <th
                               scope="col"
-                              class="px-2 leading-3 py-1.5 text-left text-xs font-semibold text-gray-900"
+                              class="px-2 leading-3 py-1.5 text-left text-xs  text-gray-900  font-normal "
                             >
                               Area in hectars
                             </th>
                             <th
                               scope="col"
-                              class="leading-3 px-2 py-1.5 text-left text-xs font-semibold text-gray-900"
+                              class="leading-3 px-2 py-1.5 text-left text-xs  font-normal   text-gray-900"
                             >
                               No. of lots
                             </th>
                           </tr>
 
-                          <tr class="bg-purple-50 border-t  border-gray-200">
+                          <tr class="bg-orange-50 border-t  border-gray-200">
                             <td
                               class="whitespace-nowrap  py-1.5 pl-4 pr-3 text-xs text-gray-900 sm:pl-3"
                             >
@@ -263,7 +268,7 @@
                               46
                             </td>
                           </tr>
-                          <tr class="bg-purple-50 border-t border-gray-200">
+                          <tr class="bg-orange-50 border-t border-gray-200">
                             <td
                               class="whitespace-nowrap py-1.5 pl-4 pr-3 text-xs text-gray-900 sm:pl-3"
                             >
@@ -303,7 +308,7 @@
                             <th
                               colspan="3"
                               scope="colgroup"
-                              class="bg-gray-50 px-2 py-2  text-left text-xs font-semibold text-gray-900 "
+                              class="bg-gray-200 font-medium px-2 py-2  text-left text-xs   text-gray-900 "
                             >
                            Gensasn Area: <span class="ml-2 inline-block">6,669,4968</span>
                             
@@ -313,25 +318,25 @@
                             <th
                               colspan="col"
                               scope="colgroup"
-                              class=" py-2 pl-4 pr-3 text-left text-xs  text-gray-900 sm:pl-3"
+                              class=" py-2 pl-4 pr-3 text-left text-xs  text-gray-900 sm:pl-3  font-normal "
                             >
                               Status
                             </th>
                             <th
                               scope="col"
-                              class="px-2 leading-3 py-1.5 text-left text-xs font-semibold text-gray-900"
+                              class="px-2 leading-3 py-1.5 text-left text-xs font-normal  text-gray-900  font-normal "
                             >
                               Area in hectars
                             </th>
                             <th
                               scope="col"
-                              class="leading-3 px-2 py-1.5 text-left text-xs font-semibold text-gray-900"
+                              class="leading-3 px-2 py-1.5 text-left text-xs font-normal  text-gray-900"
                             >
                               No. of lots
                             </th>
                           </tr>
 
-                          <tr class="bg-purple-50 border-t border-gray-200">
+                          <tr class="bg-orange-50 border-t border-gray-200">
                             <td
                               class="whitespace-nowrap py-1.5 pl-4 pr-3 text-xs text-gray-900 sm:pl-3"
                             >
@@ -365,7 +370,7 @@
                               46
                             </td>
                           </tr>
-                          <tr class="bg-purple-50 border-t border-gray-200">
+                          <tr class="bg-orange-50 border-t border-gray-200">
                             <td
                               class="whitespace-nowrap py-1.5 pl-4 pr-3 text-xs text-gray-900 sm:pl-3"
                             >
@@ -407,7 +412,7 @@
               </div>
             </aside>
 
-            <aside class="col-span-2 dar-ov " v-if="selected_tab === 2">
+            <aside class=" ">
 
             
             <div class="mt-2 ">
@@ -416,25 +421,25 @@
                 <div class="inline-block min-w-full align-middle">
                   <table class="min-w-full">
                     <tbody class="bg-white">
-                      <tr class="border-t border-gray-200">
+                      <tr class="border-t  border-gray-200">
                         <th
                           colspan="col"
                           scope="colgroup"
-                          class=" py-2 pl-4 pr-3 text-left text-xs font-semibold text-gray-900 sm:pl-3"
+                          class="bg-gray-200 font-medium px-2 py-2  text-left text-xs   text-gray-900"
                         >
                           Land Status
                         </th>
                         <th
                           colspan="col"
                           scope="colgroup"
-                          class=" py-2 pl-4 pr-3 text-left text-xs font-semibold text-gray-900 sm:pl-3"
+                          class="bg-gray-200 font-medium px-2 py-2  text-left text-xs   text-gray-900"
                         >
                          Areas In hectars
                         </th>
                       </tr>
                      
 
-                          <tr class="bg-purple-50 border-t border-gray-200">
+                          <tr class="bg-orange-50 border-t border-gray-200">
                             <td
                               class="whitespace-nowrap py-1.5 pl-4 pr-3 text-xs text-gray-900 sm:pl-3"
                             >
@@ -461,14 +466,14 @@
                             >
                           1,809,39
 
-                            <p class="text-xs ">under Agreement</p>
+                         
                             </td>
                           
                           </tr>
 
                       
 
-                          <tr class="bg-purple-50 border-t border-gray-200">
+                          <tr class="bg-orange-50 border-t border-gray-200">
                             <td
                               class="whitespace-nowrap py-1.5 pl-4 pr-3 text-xs text-gray-900 sm:pl-3"
                             >
@@ -479,7 +484,7 @@
                             >
                               150, 0766
 
-                            <p class="text-xs ">under Agreement</p>
+                         
                             </td>
                           
                           </tr>
@@ -498,13 +503,13 @@
                             >
                               483,5057
 
-                            <p class="text-xs ">under Agreement</p>
+                         
                             </td>
                           
                           </tr>
 
                           
-                          <tr class="bg-purple-50 border-t border-gray-200">
+                          <tr class="bg-orange-50 border-t border-gray-200">
                             <td
                               class="whitespace-nowrap py-1.5 pl-4 pr-3 text-xs text-gray-900 sm:pl-3"
                             >
@@ -515,7 +520,7 @@
                             >
   205,4304
 
-                            <p class="text-xs ">under Agreement</p>
+                         
                             </td>
                           
                           </tr>
@@ -535,7 +540,7 @@
       </section>
     </section>
 
-    <!-- <Chart/> -->
+
   </div>
 </template>
 
@@ -596,23 +601,16 @@ export default {
         labels: [
           "Gensan",
           "Tupi",
-          "Marbel",
           "Polomolok",
-          "Tantangan",
-          "Poland",
-          "Isulan",
-          "Gensan",
+          "Marbel",
+ 
         ],
         value: [
           { value: 1548, name: "Gensan" },
           { value: 1335, name: "Tupi" },
-          { value: 1310, name: "Marbel" },
           { value: 1130, name: "Polomolok" },
-          { value: 1330, name: "Tantangan" },
-          { value: 410, name: "Poland" },
-          { value: 820, name: "Isulan" },
-          { value: 960, name: "Gensan" },
-        ],
+          { value: 1310, name: "Marbel" },
+         ],
       },
     };
   },
